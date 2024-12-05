@@ -1,0 +1,56 @@
+/* Tailwind CSS defaults already apply most styles, but you can further customize if needed */
+
+/* Placeholder style for charts (if not dynamically rendered) */
+canvas {
+  height: 50px;
+  width: 100%;
+}
+
+/* Custom style for header and sidebar, if needed */
+header {
+  background-color: #000985;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+aside {
+  width: 250px;
+  background-color: #1A237E;
+  color: white;
+}
+
+aside nav a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #000b55;
+  transition: background-color 0.3s ease;
+
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+aside nav a:hover {
+  background-color: #000b55;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  color: "white";
+}
+
+aside nav a span {
+  margin-right: 10px;
+}
+
+.first{
+  background-color: #000b55;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
