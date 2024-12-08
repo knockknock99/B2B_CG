@@ -18,3 +18,17 @@ export default {
     },
     plugins: [],
 };
+
+
+
+module.exports = {
+    theme: {
+      extend: {
+        colors: {
+          customBlue: '#000033', // You can name it as you wish
+        },
+      },
+    },
+    plugins: [],
+  };
+  
