@@ -9,7 +9,7 @@
         <div class="col-lg-3 col-md-4 mb-4">
             <div class="sidebar bg-light p-3 rounded shadow-sm" style="position: absolute; left: 0; top: 0; height: 100vh; width: 200px;">
                 <div class="logo text-center mb-4">
-                    <img src="assets/img/codegraphi-logo.png" alt="Logo" class="img-fluid">
+                    <img src="assets/img/codegraphi-logo.png" alt="Logo" class="img-fluid w-25">
                 </div>
                 <ul class="list-unstyled">
                     <li class="mb-3"><a href="#" class="text-decoration-none text-dark d-flex align-items-center"><i class="fas fa-home me-2"></i> Dashboard</a></li>
@@ -88,13 +88,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
 
 <script>
     document.getElementById('browse-plans-link').addEventListener('click', function(e) {

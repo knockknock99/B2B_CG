@@ -24,6 +24,9 @@
                      <li class="nav-item">
                          <a class="nav-link" href="{{ route('mobile-recharge') }}">Mobile Recharge</a>
                      </li>
+                     <li>
+                         <a href="{{ route('dth-recharge') }}"><i class="fas fa-tv"></i> DTH Recharge</a>
+                     </li>
                  </ul>
              </div>
          </div>
@@ -32,10 +35,6 @@
      <div class="container mt-4">
          @yield('content')
      </div>
-
-     <!-- <footer class="bg-dark text-white text-center py-2">
-         &copy; 2024 Codegraphi. All Rights Reserved.
-     </footer> -->
 
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
  </body>

@@ -240,43 +240,59 @@
 
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/DTH-recharge.png" alt="Mobile Recharge">
+                                <a href="{{ route('dth-recharge') }}">
+                                    <img src="assets/img/icons/DTH-recharge.png" alt="Mobile Recharge">
+                                </a>
                             </div>
                             <div class="service-text">DTH Recharge</div>
                         </div>
+
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/bill-payment.png" alt="Mobile Recharge">
+                                <a href="{{ route('bill-payment') }}">
+                                    <img src="assets/img/icons/bill-payment.png" alt="Bill Payment">
+                                </a>
                             </div>
                             <div class="service-text">Bill Payment</div>
                         </div>
+
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/AEPS.png" alt="Mobile Recharge">
+                                <a href="{{ route('aeps') }}">
+                                    <img src="assets/img/icons/AEPS.png" alt="AEPS">
+                                </a>
                             </div>
                             <div class="service-text">AEPS</div>
                         </div>
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/money-transfer.png" alt="Mobile Recharge">
+                                <a href="{{ route('money-transfer') }}">
+                                    <img src="assets/img/icons/money-transfer.png" alt="Money Transfer">
+                                </a>
                             </div>
                             <div class="service-text">Money Transfer</div>
                         </div>
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/move-bank.png" alt="Mobile Recharge">
+                                <a href="{{ route('move-to-bank') }}">
+                                    <img src="assets/img/icons/move-bank.png" alt="Move to Bank">
+                                </a>
                             </div>
                             <div class="service-text">Move To Bank</div>
                         </div>
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/fund-request.png" alt="Mobile Recharge">
+                                <a href="{{ route('fund.request.form') }}">
+                                    <img src="assets/img/icons/fund-request.png" alt="Fund Request">
+                                </a>
                             </div>
                             <div class="service-text">Fund Request</div>
                         </div>
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/aadhar-pay.png" alt="Mobile Recharge">
+                                <a href="{{ route('aadhaar-pay') }}">
+                                    <img src="assets/img/icons/aadhar-pay.png" alt="Aadhaar Pay">
+                                </a>
                             </div>
                             <div class="service-text">Aadhaar Pay</div>
                         </div>
