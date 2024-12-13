@@ -32,7 +32,7 @@
 
         .btn {
             background-color: #007bff;
-            color: white;
+            color: black;
             border-radius: 6px;
         }
 
@@ -47,57 +47,80 @@
         <h2 class="text-center mb-4">Request for Funds</h2>
 
         @if(session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
         @endif
 
         <form method="POST" action="{{ route('fund.request.submit') }}">
             @csrf
             <div class="form-group">
-                <label for="company_bank">Company Bank</label>
-                <select id="company_bank" name="company_bank" class="form-control" required>
-                    <option value="">-- Choose --</option>
+                <select id="company_bank" name="company_bank" class="form-control border-0 border-bottom rounded-0" style="box-shadow: none; outline: none;" required>
+                    <option value="" disabled selected>Company Bank</option>
                     <option value="bank1">Bank 1</option>
                     <option value="bank2">Bank 2</option>
                 </select>
                 @error('company_bank')
-                    <small class="text-danger">{{ $message }}</small>
+                <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
+
             <div class="form-group">
-                <label for="deposit_date">Deposit Date</label>
-                <input type="date" id="deposit_date" name="deposit_date" class="form-control" required>
+                <input
+                    type="date"
+                    id="deposit_date"
+                    name="deposit_date"
+                    class="form-control border-0 border-bottom rounded-0"
+                    placeholder="Deposit Date *"
+                    style="box-shadow: none; outline: none;"
+                    required />
                 @error('deposit_date')
-                    <small class="text-danger">{{ $message }}</small>
+                <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
             <div class="form-group">
-                <label for="payment_mode">Payment Mode</label>
-                <select id="payment_mode" name="payment_mode" class="form-control" required>
+                <select
+                    id="payment_mode"
+                    name="payment_mode"
+                    class="form-control border-0 border-bottom rounded-0"
+                    style="box-shadow: none; outline: none;"
+                    required>
+                    <option value="" disabled selected> Payment Mode *</option>
                     <option value="cash">Cash</option>
                     <option value="cheque">Cheque</option>
                     <option value="online">Online</option>
                 </select>
                 @error('payment_mode')
-                    <small class="text-danger">{{ $message }}</small>
+                <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
+
             <div class="form-group">
-                <label for="amount">Amount</label>
-                <input type="number" id="amount" name="amount" class="form-control" placeholder="Enter Amount" required>
+                <input
+                    type="number"
+                    id="amount"
+                    name="amount"
+                    class="form-control border-0 border-bottom rounded-0"
+                    placeholder="Enter Amount *"
+                    style="box-shadow: none; outline: none;"
+                    required />
                 @error('amount')
-                    <small class="text-danger">{{ $message }}</small>
+                <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
             <div class="form-group">
-                <label for="remark">Remark</label>
-                <textarea id="remark" name="remark" class="form-control" placeholder="Enter remark"></textarea>
+                <textarea
+                    id="remark"
+                    name="remark"
+                    class="form-control border-0 border-bottom rounded-0"
+                    placeholder="Enter Remark"
+                    style="box-shadow: none; outline: none;"></textarea>
                 @error('remark')
-                    <small class="text-danger">{{ $message }}</small>
+                <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
-            <button type="submit" class="btn w-100">Send Request</button>
+
+            <button type="submit" class="btn w-40">Send Request</button>
         </form>
     </div>
 </body>

@@ -75,7 +75,7 @@
             <p><strong>IFSC Code:</strong> IFSC000CODE</p>
             <p><strong>AC Holder:</strong> BENE NAME</p>
             <div class="status">
-                <span class="btn-verified">Verified</span>
+                <span class="btn-verified text-black">Verified</span>
             </div>
         </div>
         <div class="bank-card">
@@ -84,15 +84,15 @@
             <p><strong>IFSC Code:</strong> IFSC000CODE</p>
             <p><strong>AC Holder:</strong> BENE NAME</p>
             <div class="status">
-                <button class="btn-upload">Upload Document</button>
+                <button class="btn-upload text-black">Upload Document</button>
             </div>
         </div>
     </div>
     <div class="actions text-center mt-4">
         <button class="btn btn-primary">
-            <a href="{{ route('add-bank-account') }}" class="text-white text-decoration-none">Add New Bank Account</a>
+            <a href="{{ route('add-bank-account') }}" class="text-black text-decoration-none">Add New Bank Account</a>
         </button>
-        <button class="btn btn-secondary">New Transaction</button>
+        <button class="btn btn-secondary text-black">New Transaction</button>
     </div>
 </body>
 

@@ -1,4 +1,4 @@
-@extends('layouts.app') 
+@extends('layouts.app')
 
 @section('content')
 <div class="container-fluid">
@@ -26,27 +26,33 @@
 
         <!-- Main Content -->
         <main class="col-lg-9 col-md-8 ms-auto p-4">
-            <div class="header mb-4">
-                <h2 class="text-black">DTH Recharge</h2>
-            </div>
             <div class="container mt-4">
                 <div class="row">
                     <!-- Left: Recharge Form -->
                     <div class="col-lg-6 col-md-12 mb-4">
                         <div class="card shadow-sm h-100">
-                            <div class="card-header text-black" style="background-color: #e6e6ff;">DTH Recharge</div>
+                            <div class="card-header text-black bg-primary">DTH Recharge</div>
                             <div class="card-body">
                                 <!-- Form Start -->
                                 <form action="{{ route('dth-recharge.process') }}" method="POST">
                                     @csrf
                                     <div class="mb-3">
-                                        <label for="dthNumber" class="form-label">DTH Number *</label>
-                                        <input type="text" id="dthNumber" name="dthNumber" class="form-control" placeholder="Enter DTH Number" required>
+                                        <input type="text"
+                                            class="form-control border-0 border-bottom rounded-0"
+                                            id="dthNumber"
+                                            name="dthNumber"
+                                            placeholder="DTH Number *"
+                                            style="box-shadow: none !important; outline: none;"
+                                            required>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="operator" class="form-label">Operator List *</label>
-                                        <select id="operator" name="operator" class="form-select" required>
-                                            <option value="">-- Choose --</option>
+                                        <select
+                                            class="form-control border-0 border-bottom rounded-0"
+                                            id="operator"
+                                            name="operator"
+                                            style="box-shadow: none !important; outline: none;"
+                                            required>
+                                            <option value="" disabled selected>Operator List *</option>
                                             <option value="Tata Sky">Tata Sky</option>
                                             <option value="Dish TV">Dish TV</option>
                                             <option value="Airtel DTH">Airtel DTH</option>
@@ -54,21 +60,24 @@
                                         </select>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="rechargeAmount" class="form-label">Recharge Amount *</label>
-                                        <input type="number" id="rechargeAmount" name="rechargeAmount" class="form-control" placeholder="Recharge Amount" required>
+                                        <input type="number"
+                                            class="form-control border-0 border-bottom rounded-0"
+                                            id="rechargeAmount"
+                                            name="rechargeAmount"
+                                            placeholder="Recharge Amount *"
+                                            style="box-shadow: none !important; outline: none;"
+                                            required>
                                     </div>
-                                    <button type="submit" class="btn text-black" style="background-color: #e6e6ff;" w-100>Submit</button>
+                                    <button type="submit" class="btn text-black bg-primary w-50">Submit</button>
                                 </form>
-                                <!-- Form End -->
                             </div>
                         </div>
                     </div>
-
                     <!-- Right: DTH Information -->
                     <div class="col-lg-6 col-md-12">
                         <div class="card shadow-sm h-100">
-                            <div class="card-header text-black" style="background-color: #e6e6ff;">
-                                <strong>DTH Information</strong>
+                            <div class="card-header text-black bg-primary">
+                                DTH Information
                             </div>
                             <div class="card-body">
                                 <p class="text-muted">

@@ -304,13 +304,17 @@
                         </div>
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/fund-transfer.png" alt="Mobile Recharge">
+                                <a href="{{ route('fund.transfer') }}">
+                                    <img src="assets/img/icons/fund-transfer.png" alt="Fund Transfer">
+                                </a>
                             </div>
                             <div class="service-text">Fund Transfer</div>
                         </div>
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/fast-tag.png" alt="Mobile Recharge">
+                                <a href="{{ route('fast-tag') }}">
+                                    <img src="assets/img/icons/fast-tag.png" alt="FastTag">
+                                </a>
                             </div>
                             <div class="service-text">FastTag</div>
                         </div>
@@ -329,7 +333,9 @@
 
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/LIC-bill.png" alt="Mobile Recharge">
+                                <a href="{{ route('lic-bill-payment') }}">
+                                    <img src="assets/img/icons/LIC-bill.png" alt="LICBill">
+                                </a>
                             </div>
                             <div class="service-text">LIC Bill Payment</div>
                         </div>

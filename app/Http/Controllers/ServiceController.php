@@ -57,6 +57,7 @@ class ServiceController extends Controller
 
         return redirect()->back()->with('error', 'Invalid Mobile Number');
     }
+
     public function moveBank()
     {
         return view('move-to-bank');
@@ -82,14 +83,22 @@ class ServiceController extends Controller
             'remark' => 'nullable|string|max:255',
         ]);
 
-        // You can save the data to the database here (example below)
-        // FundRequest::create($validated);
-
-        // Redirect back with a success message
         return redirect()->route('fund.request.form')->with('success', 'Fund request submitted successfully!');
     }
     public function showAadhaar()
     {
-        return view('aadhaar-pay'); 
+        return view('aadhaar-pay');
+    }
+    public function showFundTransfer()
+    {
+        return view('fund-transfer');
+    }
+    public function showFastTag()
+    {
+        return view('fast-tag');
+    }
+    public function showLIC()
+    {
+        return view('lic-bill-payment');
     }
 }

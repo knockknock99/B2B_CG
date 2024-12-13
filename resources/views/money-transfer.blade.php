@@ -49,19 +49,23 @@
 <body>
     <div class="form-container">
         <h3>Check Mobile Number</h3>
-        <form action="{{ route('check.mobile') }}" method="POST">
+        <form id="checkMobileForm" action="{{ route('check.mobile') }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="mobileNumber" class="form-label">Mobile No<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" id="mobileNumber" name="mobile_number" placeholder="10 Digit Mobile Number" required>
+                <input type="text"
+                    class="form-control border-0 border-bottom rounded-0"
+                    id="mobile-number"
+                    placeholder="Mobile Number *"
+                    style="box-shadow: none !important; outline: none;"
+                    maxlength="10"
+                    required>
             </div>
-            <button type="submit" class="btn btn-primary">CHECK</button>
+            <button type="submit" class="btn btn-primary text-black">CHECK</button>
         </form>
-
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

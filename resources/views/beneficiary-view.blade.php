@@ -6,12 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Beneficiaries</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .card {
+            border: none;
+        }
+        .btn {
+            margin-right: 5px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container mt-5">
         <h3>View Beneficiaries</h3>
-        <div class="card p-3">
+        <div class="card p-3 mb-4">
             <div class="row">
                 <div class="col-md-6">
                     <strong>Name:</strong> {{ $userData['name'] }}
@@ -28,7 +42,7 @@
             </div>
         </div>
 
-        <table class="table mt-3">
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>#</th>
@@ -57,8 +71,8 @@
             </tbody>
         </table>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

@@ -1,51 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New Bank Account</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .form-control {
+            border-radius: 0.25rem;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container mt-5">
         <h2 class="text-center mb-4">Add New Bank Account</h2>
-        <form action="/bank-accounts" method="POST" class="p-4 border rounded bg-white shadow">
+        <form action="/bank-accounts" method="POST" class="p-4 border rounded bg-white shadow form-container">
             @csrf
             <div class="mb-3">
-                <label for="bank" class="form-label">Bank*</label>
-                <select id="bank" name="bank" class="form-select" required>
-                    <option value="">-- Choose Bank --</option>
+                <select class="form-select border-0 border-bottom rounded-0" id="bank" style="box-shadow: none !important; outline: none;" required>
+                    <option value="" disabled selected>Choose Bank *</option>
                     <option value="SBI">State Bank of India</option>
                     <option value="HDFC">HDFC Bank</option>
                     <option value="ICICI">ICICI Bank</option>
                 </select>
             </div>
+
             <div class="mb-3">
-                <label for="account_number" class="form-label">Account Number*</label>
-                <input type="text" id="account_number" name="account_number" class="form-control" placeholder="Account No" required>
+                <input
+                    type="text"
+                    id="account_number"
+                    name="account_number"
+                    class="form-control border-0 border-bottom rounded-0"
+                    placeholder="Account No *"
+                    style="box-shadow: none !important; outline: none;"
+                    required />
             </div>
+
             <div class="mb-3">
-                <label for="ifsc_code" class="form-label">IFSC Code*</label>
-                <input type="text" id="ifsc_code" name="ifsc_code" class="form-control" placeholder="IFSC Code" required>
+                <input
+                    type="text"
+                    id="ifsc_code"
+                    name="ifsc_code"
+                    class="form-control border-0 border-bottom rounded-0"
+                    placeholder="IFSC Code *"
+                    style="box-shadow: none !important; outline: none;"
+                    required />
             </div>
+
             <div class="mb-3">
-                <label for="account_holder" class="form-label">Account Holder Name*</label>
-                <input type="text" id="account_holder" name="account_holder" class="form-control" placeholder="Account Holder Name" required>
+                <input
+                    type="text"
+                    id="account_holder"
+                    name="account_holder"
+                    class="form-control border-0 border-bottom rounded-0"
+                    placeholder="Account Holder Name *"
+                    style="box-shadow: none !important; outline: none;"
+                    required />
             </div>
+
             <div class="mb-3">
-                <label for="account_type" class="form-label">Account Type*</label>
-                <select id="account_type" name="account_type" class="form-select" required>
-                    <option value="">-- Choose --</option>
+                <select class="form-select border-0 border-bottom rounded-0" id="account_type" style="box-shadow: none !important; outline: none;" required>
+                    <option value="" disabled selected>Choose Account Type *</option>
                     <option value="savings">Savings</option>
                     <option value="current">Current</option>
                 </select>
             </div>
+
             <div class="mb-3">
-                <label for="transaction_password" class="form-label">Transaction Password*</label>
-                <input type="password" id="transaction_password" name="transaction_password" class="form-control" placeholder="Enter Your Transaction Password" required>
+                <input
+                    type="password"
+                    id="transaction_password"
+                    name="transaction_password"
+                    class="form-control border-0 border-bottom rounded-0"
+                    placeholder="Enter Your Transaction Password *"
+                    style="box-shadow: none !important; outline: none;"
+                    required />
             </div>
-            <button type="submit" class="btn btn-primary w-100">Submit</button>
+
+            <button type="submit" class="btn btn-primary text-black w-40">Submit</button> 
         </form>
     </div>
 </body>
+
 </html>

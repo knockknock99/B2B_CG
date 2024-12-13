@@ -32,39 +32,43 @@
                 <!-- Mobile Recharge Form -->
                 <div class="col-md-12 col-lg-5 mb-4">
                     <div class="card shadow-sm">
-                        <div class="card-header text-black" style="background-color: #e6e6ff;">
-                            <strong>Mobile Recharge</strong>
+                        <div class="card-header text-black bg-primary">
+                            Mobile Recharge
                         </div>
                         <div class="card-body">
                             <form>
                                 <div class="mb-3">
-                                    <label for="mobile-number" class="form-label">Mobile Number *</label>
-                                    <input type="text" class="form-control" id="mobile-number" placeholder="Enter Mobile Number">
+                                    <input type="text"
+                                        class="form-control border-0 border-bottom rounded-0"
+                                        id="mobile-number"
+                                        placeholder="Mobile Number *"
+                                        style="box-shadow: none !important; outline: none;">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="operator" class="form-label">Operator List *</label>
-                                    <select class="form-select" id="operator">
-                                        <option value="">-- Choose --</option>
+                                    <select class="form-select border-0 border-bottom rounded-0" id="operator" style="box-shadow: none !important; outline: none;">
+                                        <option value="" disabled selected>-- Operator List --</option>
                                         <option value="airtel">Airtel</option>
                                         <option value="jio">Jio</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="circle" class="form-label">Circle *</label>
-                                    <select class="form-select" id="circle">
-                                        <option value="">-- Choose --</option>
+                                    <select class="form-select border-0 border-bottom rounded-0" id="circle" style="box-shadow: none !important; outline: none;">
+                                        <option value="" disabled selected>-- Circle --</option>
                                         <option value="delhi">Delhi</option>
                                         <option value="mumbai">Mumbai</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="recharge-amount" class="form-label">Recharge Amount *</label>
-                                    <input type="text" class="form-control" id="recharge-amount" placeholder="Enter Recharge Amount">
+                                    <input type="text"
+                                        class="form-control border-0 border-bottom rounded-0"
+                                        id="recharge-amount"
+                                        placeholder="Enter Recharge Amount *"
+                                        style="box-shadow: none !important; outline: none;">
                                     <small>
                                         <a href="#" id="browse-plans-link" class="text-primary">Browse Plans</a>
                                     </small>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100 text-black" style="background-color: #e6e6ff;">Submit</button>
+                                <button type="submit" class="btn w-50 text-black bg-primary">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -73,8 +77,8 @@
                 <!-- Browse Plans -->
                 <div class="col-md-12 col-lg-7 mb-4">
                     <div class="card shadow-sm">
-                        <div class="card-header text-black" style="background-color: #e6e6ff;">
-                            <strong>Browse Plans</strong>
+                        <div class="card-header text-black bg-primary">
+                            Browse Plans
                         </div>
                         <div class="card-body">
                             <p class="text-muted">
