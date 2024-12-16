@@ -8,20 +8,24 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
-</head>
-<body class="bg-gray-100">
 
-<div class="main-container flex flex-col h-screen">
+@stack('scripts')
+
+</head>
+<body class="bg-gray-100 ">
+
+<div class="main-container flex flex-col h-screen ">
   <!-- Sidebar start-->
-  <aside id="sidebar" class="sidebar fixed top-0 left-0 bg-white w-64 h-full shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto  z-20">
-    <div class="p-3 border-b-2 border-blue-900">
-      <div class="flex justify-between items-center p-3">
-        <img src="https://www.codegraphi.com/assets/img/codegraphi-logo.png" alt="Code Graphi Logo">
+  <aside id="sidebar" class="sidebar  fixed top-0 left-0 bg-white w-64 h-full shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto  z-20">
+    <div class="p-2 border-b-2 border-blue-900">
+      <div class="flex justify-between items-center p-2">
+       <a href="/"> <img src="https://www.codegraphi.com/assets/img/codegraphi-logo.png" alt="Code Graphi Logo"> </a>
         <button id="close-sidebar" class="md:hidden text-blue-900 text-xl">&times;</button>
       </div>
+      {{-- <p class="flex justify-center">(User)</p> --}}
     </div>
     <nav class="mt-5">
-      <a href="/" class="flex items-center px-4 py-4  font-medium  text-white bg-blue-900 mb-3 rounded-l-3xl">
+      <a href="{{route('user.dashboard')}}" class="flex items-center px-4 py-4  font-medium  text-white bg-blue-900 mb-3 rounded-l-3xl">
         <span class="mr-3 ">
           <img src="img/home1.png" width="23" alt="home">
         </span><span>Dashboard</span>
@@ -52,8 +56,8 @@
       
         <!-- Dropdown -->
         <div id="kyc-dropdown-menu" class="relative left-10 w-48 hidden">
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Account KYC</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Merchant E-Kyc</a>
+          <a href="{{route('user.kyc')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Account KYC</a>
+          <a href="{{route('user.merchant')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Merchant E-Kyc</a>
           {{-- <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">KYC Option 3</a> --}}
         </div>
       </div>
@@ -83,7 +87,7 @@
       
 
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.service')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="https://static.thenounproject.com/png/2573773-200.png" width="30px" height="30px" alt="service icon">
         </span><span>Services</span>
@@ -98,7 +102,7 @@
 
       <div class="relative">
         <!-- Trigger -->
-        <a href="#" 
+        <a href="" 
            class="flex items-center px-4 py-3 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
            id="service-report-btn">
           <span class="mr-3">
@@ -114,14 +118,14 @@
       
         <!-- Dropdown -->
         <div id="dropdown-menu" class="relative left-8  w-48 hidden">
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Mobile Recharge</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Dth Recharge</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Bill Payment</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Aeps</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Money Transfer</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Payout</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Fund Request</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Aadhar Pay</a>
+          <a href="{{route('user.mobilerecharge')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Mobile Recharge</a>
+          <a href="{{route('user.dth_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Dth Recharge</a>
+          <a href="{{route('user.bill_payment_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Bill Payment</a>
+          <a href="{{route('user.aeps_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Aeps</a>
+          <a href="{{route('user.money_transfer_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Money Transfer</a>
+          {{-- <a href="{{route('user.tds')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Payout</a> --}}
+          <a href="{{route('user.fund_request')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Fund Request</a>
+          <a href="{{route('user.aadhar_pay_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Aadhar Pay</a>
         </div>
       </div>
 
@@ -150,32 +154,32 @@
       
 
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.account_histry')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/file.png" width="30px" height="30px" alt="">
         </span><span>Account History</span>
       </a>
 
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.commission_slab')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/commission.png" width="30px" height="30px"  alt="home">
         </span><span>My Commission Slab</span>
       </a>
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.gstreport')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/gst.png" width="30px" height="30px" alt="">
         </span><span>GST Report</span>
       </a>
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.tds')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/tds.png" width="30px" height="30px" alt="">
         </span><span>TDS Report</span>
       </a>
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.commissionReport')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/commission_report.png" width="30px" height="30px" alt="">
         </span><span>Commision Report</span>
@@ -207,7 +211,7 @@
       
         <!-- Dropdown -->
         <div id="account-dropdown-menu" class="relative left-10 w-48 hidden">
-          <a href="/account_setting" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Change Password</a>
+          <a href="{{route('user.account_setting')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Change Password</a>
           {{-- <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Settings</a>
           <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Logout</a> --}}
         </div>
@@ -244,210 +248,126 @@
   {{-- sidebar end  --}}
 
 
+
   
 
   <!-- Header start-->
-<div class="flex-1 ml-0 md:ml-64">
-    <header class="bg-blue-900 text-white p-3 flex justify-around items-center  sticky top-0 z-10 rounded-xl ml-1.5 mr-1.5">
-        <button id="open-sidebar" class="md:hidden text-xl">&#9776;</button>
+<div class="flex-1 ml-0 md:ml-64 ">
 
-        <div class="rounded-full pl-3">
-            {{-- <img src="https://www.codegraphi.com/assets/img/codegraphi-logo.png" width="200px" height="200px" alt="Code Graphi Logo"> --}}
-            <img src="img/favicon.png" width="45px" height="45px" alt="">
+    {{-- <div class="flex-1 ml-0 md:ml-64"> --}}
+        <header class="bg-blue-900 text-white p-3 ml-3 flex justify-between items-center sticky top-0 z-10 rounded-xl ml-1.5 mr-1.5">
+          <button id="open-sidebar" class="md:hidden text-2xl">&#9776;</button>
+      
+          <div class="flex space-x-2">
+            <div class="rounded-lg px-2 lg:px-4 py-1 lg:py-2 ml-1 lg:bg-white text-white lg:text-blue-900 flex items-center  sm:py-1 ">
+              {{-- <h1 class="text-sm font-bold"></h1> --}}
+              <span class=" font-normal text-xs lg:text-md lg:font-bold lg:text-lg">₹ 200000.00</span>
+            </div>
+
+            <div class="block rounded-lg  px-2 lg:px-4 py-1 lg:py-2 lg:bg-white text-white lg:text-blue-900 flex items-center justify-center ">
+              <img src="img/plus.jpeg" width="20px" height="20px" class="mr-1 " alt="">  
+              <h1 class="text-sm lg:text-md lg:font-bold lg:text-lg cursor-pointer"><span class="text-sm lg:text-lg lg:font-normal">
+              </span >Add Bal</h1>
+              {{-- <span class="text-sm font-bold">₹ 0</span> --}}
+            </div>
+
+            <div class="rounded-lg px-4 lg:py-2 lg:bg-white  text-green-500 flex items-center flex-row ">
+              <h1 class="text-sm font-normal lg:text-md lg:font-bold  lg:text-lg"><span class="text-white lg:text-blue-900">KYC Status: </span>Verified </h1>
+              {{-- <span class="text-sm font-bold">₹ 0</span> --}}
+              <img src="img/tick2.jpg" width="15px" height="15px" class="mr-1" alt="">
+            </div>
+
           </div>
-          
-        <div class="overflow-hidden whitespace-nowrap mr-10 w-full  flex justify-around items-center">
-          <span id="running-text" class="inline-block animate-scroll text-lg font-medium ">
-            Welcome to Code Graphi
-          </span>
+      
+          {{-- <div class="overflow-hidden whitespace-nowrap mr-10 flex-grow flex items-center justify-center">
+            <span id="running-text" class="inline-block animate-scroll text-lg font-medium text-white">
+              Welcome to Code Graphi
+            </span>
+          </div> --}}
+      
+          <div class="relative ">
+           
+       
+          <div class="flex justify-center align-center ">
 
-        </div>
+            <style>
+              @media(max-width: 680px){
+                .mb h3{
+               display: none;
+               margin-left: 2px;
+                }
+                /* .wallet{
+                  font-size: 20px;
+                  font-weight: bold;
+                } */
+              }
+            </style>
+            <div class="mb mr-4">
+              <h3>Welcome, Md Jasim</h3>
+            </div>
 
-
-        <div class="relative">
-            <button class="w-8 h-8 rounded-full bg-gray-100 text-blue-900 flex items-center justify-center mr-5" id="avatarButton">
+            <button class="w-8 h-8 rounded-full bg-gray-100 text-blue-900 flex items-center justify-center  lg:mr-5" id="avatarButton">
               <img src="https://abheepay.com/backend/assets/img/avatars/1.png" id="profile-pic" class="rounded-full" alt="profile-pic">
             </button>
+
+          </div>
+
+            
             <!-- Dropdown Menu -->
-            <div id="dropdownMenu" class="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg flex flex-col align-center hidden">
-              <a href="#" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">MY Profile</a>
-              <a href="#" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">Retailer  KYC</a>
+            <div id="dropdownMenu" class="absolute right-0 mt-2 mr-5 w-40 bg-white border rounded-lg shadow-lg flex flex-col align-center hidden">
+              <a href="/my_profile" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">MY Profile</a>
+              <a href="/certificate" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">Certificate</a>
+              {{-- <a href="#" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">Retailer KYC</a> --}}
               <a href="#" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">Support</a>
               <a href="#" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">Log out</a>
             </div>
           </div>
-
-          
-
-      </header>
-
-      <style>
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  .animate-scroll {
-    display: inline-block;
-    animation: scroll 10s linear infinite;
-  }
-</style>
-
-
-
-<script>
-    const profilePic = document.getElementById('profile-pic');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-  
-    // Toggle dropdown visibility on profile picture click
-    profilePic.addEventListener('click', () => {
-      dropdownMenu.classList.toggle('hidden');
-    });
-  
-    // Close dropdown if clicking outside of it
-    document.addEventListener('click', (event) => {
-      if (!profilePic.contains(event.target) && !dropdownMenu.contains(event.target)) {
-        dropdownMenu.classList.add('hidden');
-      }
-    });
-  </script>
+        </header>
+      
+        <style>
+          @keyframes scroll {
+            0% {
+              transform: translateX(100%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+      
+          .animate-scroll {
+            display: inline-block;
+            animation: scroll 10s linear infinite;
+          }
+        </style>
+      
+        <script>
+          const profilePic = document.getElementById('profile-pic');
+          const dropdownMenu = document.getElementById('dropdownMenu');
+      
+          // Toggle dropdown visibility on profile picture click
+          profilePic.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+          });
+      
+          // Close dropdown if clicking outside of it
+          document.addEventListener('click', (event) => {
+            if (!profilePic.contains(event.target) && !dropdownMenu.contains(event.target)) {
+              dropdownMenu.classList.add('hidden');
+            }
+          });
+        </script>
+      {{-- </div> --}}
+      
 {{-- Header end  --}}
 
 
+{{-- Main content  --}}
     
- <!-- Main Content  start-->
- <main class="p-4">
+@yield('content')
 
-    {{-- <div class="bg-white p-6 rounded-md shadow-md mb-4">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div >
-          <h1 class="text-2xl font-bold text-blue-900">Good Afternoon, Tester!</h1>
-          <p class="text-lg font-medium">Wallet ₹ 1001.00</p>
-          <div class="mt-2">
-            <p class="font-medium">HelpLine No: 999 999 1234</p>
-            <p class="font-medium">TSM-Mob: 999 999 1234</p>
-          </div>
-        </div>
-        
-        <div class="mt-4 md:mt-0">
-          <img
-            src="https://abheepay.com/backend/assets/img/illustrations/man-with-laptop.gif"
-            alt="Man with Laptop"
-            width="200"
-            height="200"
-            class="rounded-md"
-          />
-        </div>
-      </div>
+{{-- main content end  --}}
 
-    </div> --}}
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-2 ">
-    <div class="bg-gradient-to-r from-red-400 to-blue-900 mr-3 text-white w-full max-w-sm rounded-lg shadow-lg p-6 mb-3">
-        <div class="flex justify-between items-center">
-          <h2 class="text-lg font-semibold">John Doe</h2>
-          <span class="text-sm font-medium">Wallet</span>
-        </div>
-        <div class="mt-8">
-          <p class="text-4xl font-bold text-center">₹ 12,345.67</p>
-        </div>
-      </div>
-
-
-      <div class="bg-gradient-to-r from-red-400 to-blue-800 mr-3 text-white w-full max-w-sm rounded-lg shadow-lg p-6 mb-3">
-        <div class="flex justify-center items-center ">
-            <h1 class="text-xl font-bold text-white">Good Afternoon, Tester!</h1>
-          {{-- <span class="text-sm font-medium">Wallet</span> --}}
-        </div>
-        <div class="mt-8">
-          {{-- <p class="text-4xl font-bold text-center">₹ 12,345.67</p> --}}
-          
-        </div>
-      </div>
-
-      <div class="bg-gradient-to-r from-blue-200 to-indigo-700 text-white w-full max-w-sm rounded-lg shadow-lg p-6 mb-3">
-        <div class="flex justify-between items-center">
-          {{-- <h2 class="text-lg font-semibold">John Doe</h2> --}}
-          {{-- <span class="text-sm font-medium">Wallet</span> --}}
-        </div>
-        <div class="mt-8 flex align-center justify-center">
-          {{-- <p class="text-4xl font-bold text-center">₹ 12,345.67</p> --}}
-          <img
-          src="https://abheepay.com/backend/assets/img/illustrations/man-with-laptop.gif"
-          alt="Man with Laptop"
-          width="200"
-          height="200"
-          class="rounded-md"
-        />
-        </div>
-      </div>
-      
-    </div>
-
-  
-    <!-- Metric Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
-      <div class="bg-white p-3 rounded-lg shadow">
-        <div class="mb-3">
-          <p class="text-2xl font-bold">₹ 25.27</p>
-          <h3 class="text-gray-700">Commission Earning</h3>
-        </div>
-        <canvas id="commissionChart"></canvas>
-      </div>
-  
-      <div class="bg-white p-3 rounded-lg shadow">
-        <div class="mb-3">
-          <p class="text-2xl font-bold">₹ 0.00</p>
-          <h3 class="text-gray-700">Wallet History</h3>
-        </div>
-        <canvas id="walletChart"></canvas>
-      </div>
-  
-      <div class="bg-white p-3 rounded-lg shadow">
-        <div class="mb-3">
-          <p class="text-2xl font-bold">₹ 0.00</p>
-          <h3 class="text-gray-700">History</h3>
-        </div>
-        <canvas id="historyChart"></canvas>
-      </div>
-    </div>
-  
-    <!-- Service Statistics -->
-    <div class="bg-white p-6 rounded-lg shadow">
-      <div class="flex justify-between items-center mb-6">
-        <h2 class="text-xl font-semibold">Service Statistics</h2>
-        <span>☰</span>
-      </div>
-  
-      <div class="flex gap-4 mb-6">
-        <div>
-          <label for="fromDate" class="block text-sm text-gray-600">From</label>
-          <input
-            type="date"
-            id="fromDate"
-            class="border rounded p-2 text-sm w-full"
-          />
-        </div>
-        <div>
-          <label for="toDate" class="block text-sm text-gray-600">To</label>
-          <input
-            type="date"
-            id="toDate"
-            class="border rounded p-2 text-sm w-full"
-          />
-        </div>
-      </div>
-  
-      <canvas id="serviceChart" width="300" height="70"></canvas>
-    </div>
-  </main>
-  
   </div>
-  
-</div>
 
 
 
@@ -473,6 +393,8 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 {{-- chart js end  --}}
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

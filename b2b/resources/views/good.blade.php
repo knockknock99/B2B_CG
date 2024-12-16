@@ -9,11 +9,11 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 ">
 
-<div class="main-container flex flex-col h-screen">
+<div class="main-container flex flex-col h-screen ">
   <!-- Sidebar start-->
-  <aside id="sidebar" class="sidebar fixed top-0 left-0 bg-white w-64 h-full shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto  z-20">
+  <aside id="sidebar" class="sidebar  fixed top-0 left-0 bg-white w-64 h-full shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto  z-20">
     <div class="p-3 border-b-2 border-blue-900">
       <div class="flex justify-between items-center p-3">
         <img src="https://www.codegraphi.com/assets/img/codegraphi-logo.png" alt="Code Graphi Logo">
@@ -244,77 +244,88 @@
   {{-- sidebar end  --}}
 
 
+
   
 
   <!-- Header start-->
-<div class="flex-1 ml-0 md:ml-64">
-    <header class="bg-blue-900 text-white p-3 flex justify-around items-center  sticky top-0 z-10 rounded-xl ml-1.5 mr-1.5">
-        <button id="open-sidebar" class="md:hidden text-xl">&#9776;</button>
+<div class="flex-1 ml-0 md:ml-64 ">
 
-        <div class="rounded-full pl-3">
-            {{-- <img src="https://www.codegraphi.com/assets/img/codegraphi-logo.png" width="200px" height="200px" alt="Code Graphi Logo"> --}}
-            <img src="img/favicon.png" width="45px" height="45px" alt="">
+    {{-- <div class="flex-1 ml-0 md:ml-64"> --}}
+        <header class="bg-blue-900 text-white p-3  flex justify-between items-center sticky top-0 z-10 rounded-xl ml-1.5 mr-1.5">
+          <button id="open-sidebar" class="md:hidden text-xl">&#9776;</button>
+      
+          <div class="flex space-x-4">
+            <div class="rounded-lg px-2 py-2 ml-1 bg-white text-blue-900 flex items-center  sm:py-1">
+              <h1 class="text-sm font-bold">Current Wallet: </h1>
+              <span class="text-sm font-bold">₹ 0</span>
+            </div>
+            <div class="rounded-lg px-2 py-2 mr-2 bg-white text-blue-900 flex items-center space-x-2 ">
+              <h1 class="text-sm font-bold cursor-pointer"><span class="font-bold">+</span>Wallet: </h1>
+              <span class="text-sm font-bold">₹ 0</span>
+            </div>
           </div>
-          
-        <div class="overflow-hidden whitespace-nowrap mr-10 w-full  flex justify-around items-center">
-          <span id="running-text" class="inline-block animate-scroll text-lg font-medium ">
-            Welcome to Code Graphi
-          </span>
+      
+          {{-- <div class="overflow-hidden whitespace-nowrap mr-10 flex-grow flex items-center justify-center">
+            <span id="running-text" class="inline-block animate-scroll text-lg font-medium text-white">
+              Welcome to Code Graphi
+            </span>
+          </div> --}}
+      
+          <div class="relative ">
+            {{-- <div class="pr-3">
+              <h2>Welcome to Md Jasim</h2>
+            </div> --}}
+       
 
-        </div>
-
-
-        <div class="relative">
             <button class="w-8 h-8 rounded-full bg-gray-100 text-blue-900 flex items-center justify-center mr-5" id="avatarButton">
               <img src="https://abheepay.com/backend/assets/img/avatars/1.png" id="profile-pic" class="rounded-full" alt="profile-pic">
             </button>
+
+            
             <!-- Dropdown Menu -->
             <div id="dropdownMenu" class="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg flex flex-col align-center hidden">
               <a href="#" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">MY Profile</a>
-              <a href="#" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">Retailer  KYC</a>
+              <a href="#" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">Retailer KYC</a>
               <a href="#" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">Support</a>
               <a href="#" class="block px-4 py-2 text-medium text-blue-900 hover:bg-gray-200 rounded-lg">Log out</a>
             </div>
           </div>
-
-          
-
-      </header>
-
-      <style>
-  @keyframes scroll {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-  .animate-scroll {
-    display: inline-block;
-    animation: scroll 10s linear infinite;
-  }
-</style>
-
-
-
-<script>
-    const profilePic = document.getElementById('profile-pic');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-  
-    // Toggle dropdown visibility on profile picture click
-    profilePic.addEventListener('click', () => {
-      dropdownMenu.classList.toggle('hidden');
-    });
-  
-    // Close dropdown if clicking outside of it
-    document.addEventListener('click', (event) => {
-      if (!profilePic.contains(event.target) && !dropdownMenu.contains(event.target)) {
-        dropdownMenu.classList.add('hidden');
-      }
-    });
-  </script>
+        </header>
+      
+        <style>
+          @keyframes scroll {
+            0% {
+              transform: translateX(100%);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+      
+          .animate-scroll {
+            display: inline-block;
+            animation: scroll 10s linear infinite;
+          }
+        </style>
+      
+        <script>
+          const profilePic = document.getElementById('profile-pic');
+          const dropdownMenu = document.getElementById('dropdownMenu');
+      
+          // Toggle dropdown visibility on profile picture click
+          profilePic.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+          });
+      
+          // Close dropdown if clicking outside of it
+          document.addEventListener('click', (event) => {
+            if (!profilePic.contains(event.target) && !dropdownMenu.contains(event.target)) {
+              dropdownMenu.classList.add('hidden');
+            }
+          });
+        </script>
+      {{-- </div> --}}
+      
 {{-- Header end  --}}
 
 
@@ -322,100 +333,226 @@
  <!-- Main Content  start-->
  <main class="p-4">
 
-    {{-- <div class="bg-white p-6 rounded-md shadow-md mb-4">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div >
-          <h1 class="text-2xl font-bold text-blue-900">Good Afternoon, Tester!</h1>
-          <p class="text-lg font-medium">Wallet ₹ 1001.00</p>
-          <div class="mt-2">
-            <p class="font-medium">HelpLine No: 999 999 1234</p>
-            <p class="font-medium">TSM-Mob: 999 999 1234</p>
-          </div>
-        </div>
-        
-        <div class="mt-4 md:mt-0">
-          <img
-            src="https://abheepay.com/backend/assets/img/illustrations/man-with-laptop.gif"
-            alt="Man with Laptop"
-            width="200"
-            height="200"
-            class="rounded-md"
-          />
-        </div>
-      </div>
-
-    </div> --}}
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-2 ">
-    <div class="bg-gradient-to-r from-red-400 to-blue-900 mr-3 text-white w-full max-w-sm rounded-lg shadow-lg p-6 mb-3">
-        <div class="flex justify-between items-center">
-          <h2 class="text-lg font-semibold">John Doe</h2>
-          <span class="text-sm font-medium">Wallet</span>
-        </div>
-        <div class="mt-8">
-          <p class="text-4xl font-bold text-center">₹ 12,345.67</p>
-        </div>
-      </div>
-
-
-      <div class="bg-gradient-to-r from-red-400 to-blue-800 mr-3 text-white w-full max-w-sm rounded-lg shadow-lg p-6 mb-3">
-        <div class="flex justify-center items-center ">
-            <h1 class="text-xl font-bold text-white">Good Afternoon, Tester!</h1>
-          {{-- <span class="text-sm font-medium">Wallet</span> --}}
-        </div>
-        <div class="mt-8">
-          {{-- <p class="text-4xl font-bold text-center">₹ 12,345.67</p> --}}
-          
-        </div>
-      </div>
-
-      <div class="bg-gradient-to-r from-blue-200 to-indigo-700 text-white w-full max-w-sm rounded-lg shadow-lg p-6 mb-3">
-        <div class="flex justify-between items-center">
-          {{-- <h2 class="text-lg font-semibold">John Doe</h2> --}}
-          {{-- <span class="text-sm font-medium">Wallet</span> --}}
-        </div>
-        <div class="mt-8 flex align-center justify-center">
-          {{-- <p class="text-4xl font-bold text-center">₹ 12,345.67</p> --}}
-          <img
-          src="https://abheepay.com/backend/assets/img/illustrations/man-with-laptop.gif"
-          alt="Man with Laptop"
-          width="200"
-          height="200"
-          class="rounded-md"
-        />
-        </div>
-      </div>
-      
-    </div>
-
   
     <!-- Metric Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-4">
-      <div class="bg-white p-3 rounded-lg shadow">
-        <div class="mb-3">
+<div class="flex grid grid-cols-1 md:grid-cols-2 gap-3 w-full">
+
+<div class="flex justify-center align-center  w-full pb-3">
+  <div class="bg-white w-full  flex justify-center align-center ">
+
+    <div class="bg-white shadow rounded-xl p-6 ">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-lg font-bold text-gray-800">Congratulations! Md Jasim</h2>
+          <p class="text-gray-800 mt-1">You have done <span class="font-bold text-indigo-600">72%</span> more sales today. Check your new badge in your profile.</p>
+          <button class="mt-4 px-4 py-2 bg-indigo-600 text-white rounded shadow hover:bg-indigo-500">View Badges</button>
+        </div>
+        <img src="https://abheepay.com/backend/assets/img/illustrations/man-with-laptop.gif" width="200px" height="200px" alt="Profile Illustration" class="w-30 pl-5">
+      </div>
+    </div>
+
+
+  </div>
+
+   
+</div>
+
+    <div class="grid  grid-cols-2 md:grid-cols-3 gap-2 mb-4">
+      <div class="bg-white p-3 rounded-lg shadow  ">
+        <div class="">
           <p class="text-2xl font-bold">₹ 25.27</p>
           <h3 class="text-gray-700">Commission Earning</h3>
         </div>
         <canvas id="commissionChart"></canvas>
       </div>
   
-      <div class="bg-white p-3 rounded-lg shadow">
-        <div class="mb-3">
+      <div class="bg-white p-3 rounded-lg shadow ">
+        <div class="">
           <p class="text-2xl font-bold">₹ 0.00</p>
           <h3 class="text-gray-700">Wallet History</h3>
         </div>
         <canvas id="walletChart"></canvas>
       </div>
   
-      <div class="bg-white p-3 rounded-lg shadow">
-        <div class="mb-3">
+      <div class="bg-white p-5 rounded-lg shadow  ">
+        <div class="">
           <p class="text-2xl font-bold">₹ 0.00</p>
           <h3 class="text-gray-700">History</h3>
         </div>
         <canvas id="historyChart"></canvas>
       </div>
     </div>
-  
-    <!-- Service Statistics -->
+
+
+</div>
+
+</div>
+
+<div class="flex-1 ml-0 md:ml-64 pr-4 pl-4 ">
+  {{-- running text --}}
+  <div class="w-full bg-white p-2  rounded-xl pr-20"> <!-- Changed mb-2 to mb-1 to reduce gap -->
+    <marquee class="text-blue-900 text-lg font-semibold"> Welcome To Code Graphi Open Monday To Saturday 10:00AM to 7:00PM</marquee>
+  </div>
+</div>
+
+
+
+
+{{-- Services Section Start --}}
+
+<div class="flex-1 ml-0 md:ml-64 pr-4 pl-4 pt-3 sm:flex-wrap">
+  <!-- Wrapper for Mobile Only View -->
+  <div class="block md:hidden">
+    <!-- Mobile View Wrapper -->
+    <div class="grid grid-cols-1 gap-4">
+      <!-- Banking Services Section -->
+      <div class="bg-white p-2 rounded-lg shadow">
+        <h2 class="text-lg font-semibold mb-4">Banking Services</h2>
+        <div class="grid grid-cols-3 gap-2">
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="AePS">
+            <p class="text-sm mt-2">AePS</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="Payout">
+            <p class="text-sm mt-2">Payout</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="Money Transfer">
+            <p class="text-sm mt-2">Money Transfer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- News Section Carousel -->
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-lg font-semibold mb-4">News</h2>
+        <div class="relative">
+          <div class="overflow-hidden rounded-lg h-40">
+            <div id="carousel" class="flex transition-transform duration-500">
+              <div class="flex-shrink-0 w-full bg-gray-200 flex items-center justify-center">
+                <img src="img/man-working-laptop.avif" alt="">
+              </div>
+              <div class="flex-shrink-0 w-full bg-gray-300 flex items-center justify-center">
+                <img src="img/man-working-laptop.avif" alt="">
+              </div>
+              <div class="flex-shrink-0 w-full bg-gray-400 flex items-center justify-center">
+                <img src="img/man-working-laptop.avif" alt="">
+              </div>
+            </div>
+          </div>
+          <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white px-2 py-1 rounded-l">
+            &#8249;
+          </button>
+          <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white px-2 py-1 rounded-r">
+            &#8250;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Default Desktop View -->
+  <div class="hidden md:block">
+    <div class="grid grid-cols-3 gap-6  ">
+      <!-- Banking Services Section -->
+      <div class="bg-white p-2 rounded-lg shadow col-span-2">
+        <h2 class="text-lg font-semibold mb-4">Banking Services</h2>
+        <div class="grid grid-cols-4 gap-2">
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="AePS">
+            <p class="text-sm mt-2">AePS</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="Payout">
+            <p class="text-sm mt-2">Payout</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="Money Transfer">
+            <p class="text-sm mt-2">Money Transfer</p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="AePS">
+            <p class="text-sm mt-2">AePS</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="Payout">
+            <p class="text-sm mt-2">Payout</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="Money Transfer">
+            <p class="text-sm mt-2">Money Transfer</p>
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="Payout">
+            <p class="text-sm mt-2">Payout</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <img src="https://abheepay.com/backend/assets/img/icons/AEPS.png" width="80px" height="80px" alt="Money Transfer">
+            <p class="text-sm mt-2">Money Transfer</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- News Section Carousel -->
+      <div class="bg-white col-span-1 p-6 rounded-lg shadow">
+        <h2 class="text-lg font-semibold mb-4">News</h2>
+        <div class="relative">
+          <div class="overflow-hidden rounded-lg h-40">
+            <div id="carousel" class="flex transition-transform duration-500">
+              <div class="flex-shrink-0 w-full bg-gray-200 flex items-center justify-center">
+                <img src="img/man-working-laptop.avif" alt="">
+              </div>
+              <div class="flex-shrink-0 w-full bg-gray-300 flex items-center justify-center">
+                <img src="img/man-working-laptop.avif" alt="">
+              </div>
+              <div class="flex-shrink-0 w-full bg-gray-400 flex items-center justify-center">
+                <img src="img/man-working-laptop.avif" alt="">
+              </div>
+            </div>
+          </div>
+          <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white px-2 py-1 rounded-l">
+            &#8249;
+          </button>
+          <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-500 text-white px-2 py-1 rounded-r">
+            &#8250;
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  const prev = document.getElementById('prev');
+  const next = document.getElementById('next');
+
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    const offset = -currentIndex * 100;
+    carousel.style.transform = `translateX(${offset}%)`;
+  }
+
+  prev.addEventListener('click', () => {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : 2;
+    updateCarousel();
+  });
+
+  next.addEventListener('click', () => {
+    currentIndex = (currentIndex < 2) ? currentIndex + 1 : 0;
+    updateCarousel();
+  });
+</script>
+
+
+
+<div class="flex-1 ml-0 md:ml-64  p-4 ">
+  <!-- Service Statistics -->
     <div class="bg-white p-6 rounded-lg shadow">
       <div class="flex justify-between items-center mb-6">
         <h2 class="text-xl font-semibold">Service Statistics</h2>
@@ -445,9 +582,8 @@
     </div>
   </main>
   
-  </div>
-  
 </div>
+  </div>
 
 
 

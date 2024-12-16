@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     labels: ['1', '2', '3', '4', '5', '6'],
     datasets: [{
       label: 'Commission Earning',
-      data: [10, 30, 20, 40, 25, 35],
+      data: [30, 40, 60, 10, 95, 100],
       borderColor: '#0088CC',
       backgroundColor: 'rgba(0, 136, 204, 0.2)',
       fill: true,
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     labels: ['1', '2', '3', '4', '5', '6'],
     datasets: [{
       label: 'Wallet History',
-      data: [5, 15, 10, 25, 20, 30],
+      data: [5, 100, 40, 25, 90, 30],
       borderColor: '#666',
       backgroundColor: 'rgba(102, 102, 102, 0.2)',
       fill: true,
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     labels: ['1', '2', '3', '4', '5', '6'],
     datasets: [{
       label: 'History',
-      data: [8, 18, 12, 22, 28, 33],
+      data: [5, 100, 40, 25, 90, 30],
       borderColor: '#00BCD4',
       backgroundColor: 'rgba(0, 188, 212, 0.2)',
       fill: true,
