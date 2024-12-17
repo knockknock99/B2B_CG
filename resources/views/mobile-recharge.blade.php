@@ -1,145 +1,102 @@
 @extends('layouts.app')
-
-@section('title', 'Mobile Recharge')
-
 @section('content')
-<div class="container-fluid mt-4">
-    <div class="row">
-        <!-- Sidebar -->
-        <div class="col-lg-3 col-md-4 mb-4">
-            <div class="sidebar bg-light p-3 rounded shadow-sm" style="position: absolute; left: 0; top: 0; height: 100vh; width: 200px;">
-                <div class="logo text-center mb-4">
-                    <img src="assets/img/codegraphi-logo.png" alt="Logo" class="img-fluid w-25">
-                </div>
-                <ul class="list-unstyled">
-                    <li class="mb-3"><a href="#" class="text-decoration-none text-dark d-flex align-items-center"><i class="fas fa-home me-2"></i> Dashboard</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none text-dark d-flex align-items-center"><i class="fas fa-id-card me-2"></i> KYC</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none d-flex align-items-center"><i class="fas fa-cogs me-2"></i> Services</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none d-flex align-items-center"><i class="fas fa-file-alt me-2"></i> Service Report</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none d-flex align-items-center"><i class="fas fa-history me-2"></i> Account History</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none d-flex align-items-center"><i class="fas fa-percent me-2"></i> My Commission Slab</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none d-flex align-items-center"><i class="fas fa-file-invoice me-2"></i> GST Report</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none d-flex align-items-center"><i class="fas fa-clipboard me-2"></i> TDS Report</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none d-flex align-items-center"><i class="fas fa-chart-bar me-2"></i> Commission Report</a></li>
-                    <li class="mb-3"><a href="#" class="text-decoration-none d-flex align-items-center"><i class="fas fa-cog me-2"></i> Account Settings</a></li>
-                </ul>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Recharge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <div class="flex flex-col lg:flex-row">
         <!-- Main Content -->
-        <div class="col-lg-9 col-md-8">
-            <div class="row">
+        <div class="ml-0 lg:ml-64 w-full px-4 sm:px-6 lg:px-10 py-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Mobile Recharge Form -->
-                <div class="col-md-12 col-lg-5 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-header text-black bg-primary">
-                            Mobile Recharge
+                <section class="bg-white shadow-md rounded-lg p-6 sm:p-8 flex flex-col justify-between">
+                    <h2 class="text-lg md:text-xl font-bold text-blue-600 mb-4 text-left">Mobile Recharge</h2>
+                    <form class="space-y-4 max-w-md mx-auto">
+                        <input type="text"
+                            placeholder="Mobile Number *"
+                            class="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2">
+                        <select class="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2 text-muted">
+                            <option value="" disabled selected> Operator List </option>
+                            <option value="airtel">Airtel</option>
+                            <option value="jio">Jio</option>
+                        </select>
+                        <select class="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2 text-muted">
+                            <option value="" disabled selected> Circle </option>
+                            <option value="delhi">Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                        </select>
+                        <input type="text" placeholder="Enter Recharge Amount *" class="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2">
+                        <a href="#" id="browse-plans-link" class="text-blue-500 text-sm block mb-2">Browse Plans</a>
+                        <div class="flex justify-start">
+                            <button type="submit" class="bg-blue-500 text-white px-3 py-2 rounded hover:bg-blue-600 text-sm">Submit</button>
                         </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="mb-3">
-                                    <input type="text"
-                                        class="form-control border-0 border-bottom rounded-0"
-                                        id="mobile-number"
-                                        placeholder="Mobile Number *"
-                                        style="box-shadow: none !important; outline: none;">
-                                </div>
-                                <div class="mb-3">
-                                    <select class="form-select border-0 border-bottom rounded-0" id="operator" style="box-shadow: none !important; outline: none;">
-                                        <option value="" disabled selected>-- Operator List --</option>
-                                        <option value="airtel">Airtel</option>
-                                        <option value="jio">Jio</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <select class="form-select border-0 border-bottom rounded-0" id="circle" style="box-shadow: none !important; outline: none;">
-                                        <option value="" disabled selected>-- Circle --</option>
-                                        <option value="delhi">Delhi</option>
-                                        <option value="mumbai">Mumbai</option>
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <input type="text"
-                                        class="form-control border-0 border-bottom rounded-0"
-                                        id="recharge-amount"
-                                        placeholder="Enter Recharge Amount *"
-                                        style="box-shadow: none !important; outline: none;">
-                                    <small>
-                                        <a href="#" id="browse-plans-link" class="text-primary">Browse Plans</a>
-                                    </small>
-                                </div>
-                                <button type="submit" class="btn w-50 text-black bg-primary">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+                    </form>
+                </section>
 
                 <!-- Browse Plans -->
-                <div class="col-md-12 col-lg-7 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-header text-black bg-primary">
-                            Browse Plans
-                        </div>
-                        <div class="card-body">
-                            <p class="text-muted">
-                                Disclaimer: While we support most recharges, we request you to verify with your operator once before proceeding.
-                            </p>
-                            <div id="plans-container"></div>
-                        </div>
+                <section class="bg-white shadow-md rounded-lg p-6 sm:p-8 flex flex-col">
+                    <h2 class="text-lg md:text-xl font-bold text-blue-600 mb-4 text-left">Browse Plans</h2>
+                    <p class="text-gray-600 text-sm mb-4 text-center">Disclaimer: Verify with your operator before proceeding.</p>
+                    <div id="plans-container" class="space-y-4 overflow-y-auto max-h-60">
+                        <!-- Plans will be dynamically loaded here -->
                     </div>
-                </div>
+                </section>
             </div>
         </div>
     </div>
-</div>
 
-<script>
-    document.getElementById('browse-plans-link').addEventListener('click', function(e) {
-        e.preventDefault();
+    <script>
+        document.getElementById('browse-plans-link').addEventListener('click', function(e) {
+            e.preventDefault();
 
-        // Sample Data (Replace with API call if needed)
-        const plans = [{
-                circle: 'Delhi NCR',
-                planType: 'TOPUP',
-                validity: 'N/A',
-                description: 'Talktime of Rs. 7.47, validity unrestricted',
-                price: 10
-            },
-            {
-                circle: 'Delhi NCR',
-                planType: 'TOPUP',
-                validity: 'N/A',
-                description: 'Talktime of Rs. 14.95, validity unrestricted',
-                price: 20
-            },
-            {
-                circle: 'Delhi NCR',
-                planType: 'TOPUP',
-                validity: 'N/A',
-                description: 'Talktime of Rs. 22.42, validity unrestricted',
-                price: 30
-            },
-        ];
+            const plans = [{
+                    circle: 'Delhi NCR',
+                    planType: 'TOPUP',
+                    validity: 'N/A',
+                    description: 'Talktime of Rs. 7.47, validity unrestricted',
+                    price: 10
+                },
+                {
+                    circle: 'Delhi NCR',
+                    planType: 'TOPUP',
+                    validity: 'N/A',
+                    description: 'Talktime of Rs. 14.95, validity unrestricted',
+                    price: 20
+                },
+                {
+                    circle: 'Delhi NCR',
+                    planType: 'TOPUP',
+                    validity: 'N/A',
+                    description: 'Talktime of Rs. 22.42, validity unrestricted',
+                    price: 30
+                },
+            ];
 
-        // Target container
-        const container = document.getElementById('plans-container');
+            const container = document.getElementById('plans-container');
+            container.innerHTML = '';
 
-        // Clear any existing content
-        container.innerHTML = '';
-
-        // Dynamically populate plans
-        plans.forEach(plan => {
-            const planCard = `
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <div>
-                    <h6>${plan.circle} - ${plan.planType}</h6>
-                    <p class="text-muted">${plan.description}</p>
-                </div>
-                <button class="btn btn-sm btn-primary">Rs. ${plan.price}</button>
-            </div>
-        `;
-            container.innerHTML += planCard;
+            plans.forEach(plan => {
+                const planCard = `
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center bg-gray-100 p-4 rounded">
+                        <div class="mb-4 md:mb-0">
+                            <h6 class="font-bold text-gray-800">${plan.circle} - ${plan.planType}</h6>
+                            <p class="text-sm text-gray-600">${plan.description}</p>
+                        </div>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Rs. ${plan.price}</button>
+                    </div>
+                `;
+                container.innerHTML += planCard;
+            });
         });
-    });
-</script>
+    </script>
+</body>
+
+</html>
 @endsection

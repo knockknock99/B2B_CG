@@ -339,9 +339,17 @@
                             </div>
                             <div class="service-text">LIC Bill Payment</div>
                         </div>
-                        <div class="col-6 col-md-2">
+                        <!-- <div class="col-6 col-md-2">
                             <div class="icon-container">
                                 <img src="assets/img/icons/NSDL-pan.png" alt="Mobile Recharge">
+                            </div>
+                            <div class="service-text">NSDL Pan Card</div>
+                        </div> -->
+                        <div class="col-6 col-md-2">
+                            <div class="icon-container">
+                                <a href="{{ route('form') }}">
+                                    <img src="assets/img/icons/NSDL-pan.png" alt="NSDL Pan Card">
+                                </a>
                             </div>
                             <div class="service-text">NSDL Pan Card</div>
                         </div>

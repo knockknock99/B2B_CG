@@ -28,9 +28,9 @@
             align-items: center;
         }
 
-        .header h2 {
+        .header h4 {
             margin: 0;
-            font-size: 24px;
+            font-weight: bold;
         }
 
         .btn-recent-transfers {
@@ -63,8 +63,10 @@
 <body>
     <div class="transfer-container">
         <div class="header">
-            <h2>Transfer Funds</h2>
-            <button class="btn-recent-transfers">All Recent Transfers</button>
+            <div class="card-header" style="background-color: white; color: #007bff;">
+                <h4>Transfer Funds</h4>
+            </div>
+            <button class="btn-recent-transfers text-white">All Recent Transfers</button>
         </div>
         <hr>
         <form>
@@ -78,8 +80,8 @@
                     style="box-shadow: none !important; outline: none;"
                     required />
             </div>
-            <div class="text-center">
-                <button type="submit" class="btn-check-user">Check User</button>
+            <div class="text-left">
+                <button type="submit " class="btn-check-user text-white">Check User</button>
             </div>
         </form>
     </div>

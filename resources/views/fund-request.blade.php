@@ -18,7 +18,7 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            max-width: 500px; /* Reduced width */
             margin: auto;
         }
 
@@ -39,12 +39,28 @@
         .btn:hover {
             background-color: #0056b3;
         }
+
+        h4 {
+            color: #007bff; 
+            font-weight: bold;
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h2 class="text-center mb-4">Request for Funds</h2>
+        <h4 class="text-left mb-4">Request for Funds</h4>
 
         @if(session('success'))
         <div class="alert alert-success">
@@ -55,7 +71,7 @@
         <form method="POST" action="{{ route('fund.request.submit') }}">
             @csrf
             <div class="form-group">
-                <select id="company_bank" name="company_bank" class="form-control border-0 border-bottom rounded-0" style="box-shadow: none; outline: none;" required>
+                <select id="company_bank" name="company_bank" class="form-control text-muted border-0 border-bottom rounded-0" style="box-shadow: none; outline: none;" required>
                     <option value="" disabled selected>Company Bank</option>
                     <option value="bank1">Bank 1</option>
                     <option value="bank2">Bank 2</option>
@@ -70,7 +86,7 @@
                     type="date"
                     id="deposit_date"
                     name="deposit_date"
-                    class="form-control border-0 border-bottom rounded-0"
+                    class="form-control  text-muted border-0 border-bottom rounded-0"
                     placeholder="Deposit Date *"
                     style="box-shadow: none; outline: none;"
                     required />
@@ -78,14 +94,15 @@
                 <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
+            
             <div class="form-group">
                 <select
                     id="payment_mode"
                     name="payment_mode"
-                    class="form-control border-0 border-bottom rounded-0"
+                    class="form-control text-muted border-0 border-bottom rounded-0"
                     style="box-shadow: none; outline: none;"
                     required>
-                    <option value="" disabled selected> Payment Mode *</option>
+                    <option value="" disabled selected>Payment Mode *</option>
                     <option value="cash">Cash</option>
                     <option value="cheque">Cheque</option>
                     <option value="online">Online</option>
@@ -108,6 +125,7 @@
                 <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
+            
             <div class="form-group">
                 <textarea
                     id="remark"
@@ -120,7 +138,7 @@
                 @enderror
             </div>
 
-            <button type="submit" class="btn w-40">Send Request</button>
+            <button type="submit" class="btn text-white w-50px">Send Request</button>
         </form>
     </div>
 </body>

@@ -63,11 +63,15 @@
         .actions {
             margin-top: 20px;
         }
+        h4 {
+            color: #007bff; /* Blue color */
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
-    <h2 class="text-center mb-4">My Bank Accounts</h2>
+    <h4 class="text-center  mb-4">My Bank Accounts</h4>
     <div class="bank-accounts">
         <div class="bank-card">
             <h5>STATE BANK OF INDIA</h5>

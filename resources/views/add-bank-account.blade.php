@@ -19,16 +19,22 @@
             max-width: 600px;
             margin: 0 auto;
         }
+
+        h4 {
+            color: #007bff;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="container mt-5">
-        <h2 class="text-center mb-4">Add New Bank Account</h2>
-        <form action="/bank-accounts" method="POST" class="p-4 border rounded bg-white shadow form-container">
+        <form action="/bank-accounts" method="POST" class="p-4 border rounded bg-white shadow-sm form-container">
+            <h4 class="mb-0 text-left ms-3 mt-2 mb-3">Add New Bank Account</h4>
             @csrf
             <div class="mb-3">
-                <select class="form-select border-0 border-bottom rounded-0" id="bank" style="box-shadow: none !important; outline: none;" required>
+                <select class="form-select  text-muted border-0 border-bottom rounded-0" id="bank" style="box-shadow: none !important; outline: none;" required>
                     <option value="" disabled selected>Choose Bank *</option>
                     <option value="SBI">State Bank of India</option>
                     <option value="HDFC">HDFC Bank</option>
@@ -70,7 +76,7 @@
             </div>
 
             <div class="mb-3">
-                <select class="form-select border-0 border-bottom rounded-0" id="account_type" style="box-shadow: none !important; outline: none;" required>
+                <select class="form-select  text-muted border-0 border-bottom rounded-0" id="account_type" style="box-shadow: none !important; outline: none;" required>
                     <option value="" disabled selected>Choose Account Type *</option>
                     <option value="savings">Savings</option>
                     <option value="current">Current</option>
@@ -88,7 +94,7 @@
                     required />
             </div>
 
-            <button type="submit" class="btn btn-primary text-black w-40">Submit</button> 
+            <button type="submit" class="btn btn-primary text-white w-40">Submit</button>
         </form>
     </div>
 </body>

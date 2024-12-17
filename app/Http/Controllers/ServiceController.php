@@ -101,4 +101,24 @@ class ServiceController extends Controller
     {
         return view('lic-bill-payment');
     }
+    public function nsdlForm()
+    {
+        return view('form');
+    }
+
+    // Method to verify PAN (you can call an external API here)
+    public function verifyPAN(Request $request)
+    {
+        // Validation
+        $request->validate([
+            'pan_number' => 'required|regex:/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/',
+        ]);
+
+        // Call your NSDL API here for PAN verification
+        $pan_number = $request->pan_number;
+        $verification_status = 'Valid'; // For testing, you can set it to 'Valid' or 'Invalid'
+
+        // Return the result
+        return view('nsdl.result', compact('verification_status', 'pan_number'));
+    }
 }

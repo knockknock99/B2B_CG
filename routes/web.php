@@ -19,3 +19,5 @@ Route::get('/aadhaar-pay', [ServiceController::class, 'showAadhaar'])->name('aad
 Route::get('/fund-transfer', [ServiceController::class, 'showFundTransfer'])->name('fund.transfer');
 Route::get('/fast-tag', [ServiceController::class, 'showFastTag'])->name('fast-tag');
 Route::get('/lic-bill', [ServiceController::class, 'showLIC'])->name('lic-bill-payment');
+Route::get('/nsdl-pan-card', [ServiceController::class, 'nsdlForm'])->name('form');
+Route::post('/nsdl-pan-card-verify', [ServiceController::class, 'verifyPAN'])->name('verify');

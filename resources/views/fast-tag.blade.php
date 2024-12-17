@@ -10,17 +10,17 @@
 
 <body>
     <div class="container my-5">
-        <div class="row">
+        <div class="row justify-content-center g-4">
             <!-- Fastag Recharge Form -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-primary text-black">Fastag Recharge</div>
+            <div class="col-md-5 ">
+                <div class="card shadow">
+                    <h4 class="text-start ms-4 mt-4 text-primary">Fastag Recharge</h4>
                     <div class="card-body">
                         <form>
                             <div class="mb-3">
                                 <select
                                     id="operator-name"
-                                    class="form-select border-0 border-bottom rounded-0"
+                                    class="form-select text-muted border-0 border-bottom rounded-0"
                                     style="box-shadow: none !important; outline: none;"
                                     required>
                                     <option value="" selected> Operator Name *</option>
@@ -38,16 +38,16 @@
                                     style="box-shadow: none !important; outline: none;"
                                     required />
                             </div>
-                            <button type="submit" class="btn btn-primary text-black">Submit</button>
+                            <button type="submit" class="btn btn-primary text-white">Submit</button>
                         </form>
                     </div>
                 </div>
             </div>
 
             <!-- Bill Details -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-primary text-black">Bill Details</div>
+            <div class="col-md-5">
+                <div class="card shadow">
+                    <h4 class="text-start ms-4 mt-4 text-primary">Bill Details</h4>
                     <div class="card-body">
                         <p class="text-muted">
                             Disclaimer: While we support most billing payments, we request you to verify with your
