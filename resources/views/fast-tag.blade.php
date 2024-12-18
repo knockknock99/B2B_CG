@@ -13,7 +13,7 @@
         <div class="row justify-content-center g-4">
             <!-- Fastag Recharge Form -->
             <div class="col-md-5 ">
-                <div class="card shadow">
+                <div class="card border-0 shadow">
                     <h4 class="text-start ms-4 mt-4 text-primary">Fastag Recharge</h4>
                     <div class="card-body">
                         <form>
@@ -43,10 +43,9 @@
                     </div>
                 </div>
             </div>
-
             <!-- Bill Details -->
             <div class="col-md-5">
-                <div class="card shadow">
+                <div class="card border-0 shadow">
                     <h4 class="text-start ms-4 mt-4 text-primary">Bill Details</h4>
                     <div class="card-body">
                         <p class="text-muted">

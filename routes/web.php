@@ -21,3 +21,7 @@ Route::get('/fast-tag', [ServiceController::class, 'showFastTag'])->name('fast-t
 Route::get('/lic-bill', [ServiceController::class, 'showLIC'])->name('lic-bill-payment');
 Route::get('/nsdl-pan-card', [ServiceController::class, 'nsdlForm'])->name('form');
 Route::post('/nsdl-pan-card-verify', [ServiceController::class, 'verifyPAN'])->name('verify');
+Route::get('/upi-collection', [ServiceController::class, 'showUPI'])->name('upi-collection');
+Route::get('/fino-cms', [ServiceController::class, 'showFinoCmsForm'])->name('fino-cms');
+Route::post('/fino-cms-submit', [ServiceController::class, 'submitFinoCmsForm'])->name('fino-cms-submit');
+Route::get('/micro-atm', [ServiceController::class, 'showMicroATMPage'])->name('micro-atm');

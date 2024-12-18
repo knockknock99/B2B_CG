@@ -70,27 +70,21 @@
 
         <!-- Main Content -->
         <div class="col-lg-9 col-md-8 offset-lg-3 offset-md-4">
-            <div class="card">
-                <div class="card-header" style="background-color: white; color: #007bff;">
-                    <h3 class="mb-0">Aadhaar Pay Cash Withdrawal</h3>
-                </div>
-
+            <div class="card border-0 shadow">
+                <h4 class="mb-0 text-primary ms-3 mt-4">Aadhaar Pay Cash Withdrawal</h4>
                 <div class="card-body">
                     <form>
                         <!-- Device Type, Mobile No, Aadhaar No, Biometrics -->
                         <div class="row mb-4">
                             <div class="col-md-3 col-sm-6 mb-3">
-                                <label for="device-type" class="form-label">Device Type</label>
                                 <select class="form-select" id="device-type" required>
                                     <option value="" disabled selected>Select Device Type *</option>
                                 </select>
                             </div>
                             <div class="col-md-3 col-sm-6 mb-3">
-                                <label for="mobile-number" class="form-label">Mobile Number</label>
                                 <input type="text" class="form-control" id="mobile-number" placeholder="Enter 10 Digit Mobile No *" required>
                             </div>
                             <div class="col-md-3 col-sm-6 mb-3">
-                                <label for="aadhaar-number" class="form-label">Aadhaar Number</label>
                                 <input type="text" class="form-control" id="aadhaar-number" placeholder="Enter 12 Digit Aadhaar No *" required>
                             </div>
                             <div class="col-md-3 col-sm-6 mb-3 text-center">
@@ -101,16 +95,13 @@
                             </div>
                         </div>
 
-                        <!-- Bank Name & Withdrawal Amount -->
                         <div class="row mb-4">
                             <div class="col-md-6 col-sm-12 mb-3">
-                                <label for="bank-name" class="form-label">Bank Name</label>
                                 <select class="form-select" id="bank-name" required>
                                     <option value="" disabled selected>- Select Bank - *</option>
                                 </select>
                             </div>
                             <div class="col-md-6 col-sm-12 mb-3">
-                                <label for="withdrawal-amount" class="form-label">Withdrawal Amount</label>
                                 <input type="text" class="form-control" id="withdrawal-amount" placeholder="Enter the Withdrawal Amount *" required>
                             </div>
                         </div>
@@ -139,7 +130,7 @@
                         <!-- Submit Button -->
                         <div class="row">
                             <div class="col-12 text-left">
-                                <button type="submit" class="btn btn-primary text-black px-4">Capture Fingerprint</button>
+                                <button type="submit" class="btn btn-primary text-white px-4">Capture Fingerprint</button>
                             </div>
                         </div>
                     </form>

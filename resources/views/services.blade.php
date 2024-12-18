@@ -298,10 +298,13 @@
                         </div>
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/micro-ATM.png" alt="Mobile Recharge">
+                                <a href="{{ route('micro-atm') }}">
+                                    <img src="assets/img/icons/micro-ATM.png" alt="Micro ATM">
+                                </a>
                             </div>
                             <div class="service-text">Micro ATM</div>
                         </div>
+
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
                                 <a href="{{ route('fund.transfer') }}">
@@ -320,17 +323,20 @@
                         </div>
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/UPI.png" alt="Mobile Recharge">
+                                <a href="{{ route('upi-collection') }}">
+                                    <img src="assets/img/icons/UPI.png" alt="UPI Collection">
+                                </a>
                             </div>
                             <div class="service-text">UPI Collection</div>
                         </div>
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
-                                <img src="assets/img/icons/Fino-cms.png" alt="Mobile Recharge">
+                                <a href="{{ route('fino-cms') }}">
+                                    <img src="assets/img/icons/Fino-cms.png" alt="Fino CMS">
+                                </a>
                             </div>
                             <div class="service-text">Fino CMS</div>
                         </div>
-
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
                                 <a href="{{ route('lic-bill-payment') }}">
@@ -339,12 +345,6 @@
                             </div>
                             <div class="service-text">LIC Bill Payment</div>
                         </div>
-                        <!-- <div class="col-6 col-md-2">
-                            <div class="icon-container">
-                                <img src="assets/img/icons/NSDL-pan.png" alt="Mobile Recharge">
-                            </div>
-                            <div class="service-text">NSDL Pan Card</div>
-                        </div> -->
                         <div class="col-6 col-md-2">
                             <div class="icon-container">
                                 <a href="{{ route('form') }}">

@@ -73,13 +73,11 @@
 
 <body>
     <div class="container form-section">
-        <div class="card shadow-sm">
+        <div class="card border-0 shadow-sm">
             <!-- Card Header -->
-            <h4 class="mb-0 text-left ms-3 mt-4">AADHAR ENABLED PAYMENT SYSTEM</h4>
-            <!-- Card Body -->
+            <h4 class="mb-0 text-left ms-3 mt-4 mb-4">AADHAR ENABLED PAYMENT SYSTEM</h4>
             <div class="card-body">
                 <form>
-                    <!-- Title -->
                     <div class="mb-3">
                         <select class="form-select border-0 border-bottom rounded-0" id="operator" style="box-shadow: none; outline: none;">
                             <option value="" disabled selected>Select Txn Type</option>
@@ -87,8 +85,6 @@
                             <option value="cashWithdrawal">Cash Withdrawal</option>
                         </select>
                     </div>
-
-                    <!-- Name Fields -->
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <select id="deviceType" class="form-select border-0 border-bottom rounded-0" style="box-shadow: none; outline: none;" required>
@@ -108,7 +104,6 @@
                         </div>
                     </div>
 
-                    <!-- Position -->
                     <div class="mb-3">
                         <input type="text"
                             class="form-control border-0 border-bottom rounded-0"
@@ -119,7 +114,6 @@
                             required>
                     </div>
 
-                    <!-- Company -->
                     <div class="mb-3">
                         <select class="form-select border-0 border-bottom rounded-0" id="bank-name" style="box-shadow: none !important; outline: none;" required>
                             <option value="" disabled selected>Bank Name</option>
@@ -128,7 +122,6 @@
                         </select>
                     </div>
 
-                    <!-- Business Arena and Employees -->
                     <div class="row">
                         <div class="col-sm-12 col-md-6">
                             <img src="https://via.placeholder.com/150" alt="Biometrics" class="img-fluid">

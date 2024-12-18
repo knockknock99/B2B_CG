@@ -137,7 +137,6 @@
                 <small class="text-danger">{{ $message }}</small>
                 @enderror
             </div>
-
             <button type="submit" class="btn text-white w-50px">Send Request</button>
         </form>
     </div>
