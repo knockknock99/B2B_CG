@@ -17,15 +17,15 @@
 <div class="main-container flex flex-col h-screen ">
   <!-- Sidebar start-->
   <aside id="sidebar" class="sidebar  fixed top-0 left-0 bg-white w-64 h-full shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto  z-20">
-    <div class="p-2 border-b-2 border-blue-900">
-      <div class="flex justify-between items-center p-1">
+    <div class="p-2 border-b-2 border-blue-900   sticky top-0 bg-white shadow-md p-4 z-10">
+      <div class="flex justify-between items-center p-1 ">
         <img src="https://www.codegraphi.com/assets/img/codegraphi-logo.png" alt="Code Graphi Logo">
         <button id="close-sidebar" class="md:hidden text-blue-900 text-xl">&times;</button>
       </div>
-      <p class="flex justify-center">(Admin)</p>
+      {{-- <p class="flex justify-center">(Admin)</p> --}}
     </div>
     <nav class="mt-5">
-      <a href="{{route('user.dashboard')}}" class="flex items-center px-4 py-4  font-medium  text-white bg-blue-900 mb-3 rounded-l-3xl">
+      <a href="{{route('admin.admin_dashboard')}}" class="flex items-center px-4 py-4  font-medium  text-white bg-blue-900 mb-3 rounded-l-3xl">
         <span class="mr-3 ">
           <img src="img/home1.png" width="23" alt="home">
         </span><span>Dashboard</span>
@@ -44,7 +44,7 @@
            class="flex items-center px-4 py-3 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
            id="kyc-btn">
           <span class="mr-3">
-            <img src="https://cdn-icons-png.flaticon.com/512/7355/7355471.png" width="30px" height="30px" alt="kyc icon">
+            <img src={{asset('img/modules.png')}} width="30px" height="30px" alt="kyc icon">
           </span>
           <span>Modules</span>
           <span class="ml-2">
@@ -61,7 +61,7 @@
           <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">User Type Master</a>
           <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Service Master</a>
           <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Plan Master</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Commission Slots</a>
+          <a href="{{route('admin.commission_slot')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Commission Slots</a>
           <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Application Setting</a>
           <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Application Banners</a>
           <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Announcements</a>
@@ -95,31 +95,31 @@
 
       <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
-            <img src="https://static.thenounproject.com/png/2573773-200.png" width="30px" height="30px" alt="service icon">
+            <img src="{{asset('img/bank.png')}}" width="25px" height="25px" alt="service icon">
         </span><span>Company Banks</span>
       </a>
 
       <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
-            <img src="https://static.thenounproject.com/png/2573773-200.png" width="30px" height="30px" alt="service icon">
+            <img src="{{asset('img/user_manager.png')}}" width="30px" height="30px" alt="service icon">
         </span><span>Users Manager</span>
       </a>
 
       <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
-            <img src="https://static.thenounproject.com/png/2573773-200.png" width="30px" height="30px" alt="service icon">
+            <img src="{{asset('img/commission_report.png')}}" width="28px" height="28px" alt="service icon">
         </span><span>Account History</span>
       </a>
 
       <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
-            <img src="https://static.thenounproject.com/png/2573773-200.png" width="30px" height="30px" alt="service icon">
+            <img src="{{asset('img/funding.png')}}" width="32px" height="32px" alt="service icon">
         </span><span>Fund Requests</span>
       </a>
 
       <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
-            <img src="https://static.thenounproject.com/png/2573773-200.png" width="30px" height="30px" alt="service icon">
+            <img src="{{asset('img/payout_bank.png')}}" width="32px" height="32px" alt="service icon">
         </span><span>Payout Banks</span>
       </a>
      
@@ -136,7 +136,7 @@
            class="flex items-center px-4 py-3 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
            id="service-report-btn">
           <span class="mr-3">
-            <img src="https://www.svgrepo.com/show/200330/report.svg" width="25px" height="25px" alt="">
+            <img src="{{asset('img/fund_transfer.png')}}" width="32px" height="32px" alt="">
           </span>
           <span>Fund Transfer</span>
           <span class="ml-2">
@@ -187,7 +187,7 @@
            class="flex items-center px-4 py-3 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
            id="service-report-btn1">
           <span class="mr-3">
-            <img src="https://www.svgrepo.com/show/200330/report.svg" width="25px" height="25px" alt="">
+            <img src="{{asset('img/commission_report.png')}}" width="28px" height="28px" alt="">
           </span>
           <span>Service Report</span>
           <span class="ml-2">
@@ -256,13 +256,13 @@
 
       <a href="{{route('user.commissionReport')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
-            <img src="img/commission_report.png" width="30px" height="30px" alt="">
+            <img src="img/commission_report.png" width="28px" height="28px" alt="">
         </span><span>Commision Report</span>
       </a>
 
       <a href="{{route('user.commissionReport')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
-            <img src="img/commission_report.png" width="30px" height="30px" alt="">
+            <img src="img/commission_report.png" width="28px" height="28px" alt="">
         </span><span>Admin Wallet</span>
       </a>
 
@@ -334,40 +334,14 @@
   
 
   <!-- Header start-->
-<div class="flex-1 ml-0 md:ml-64 ">
+  <div class="flex-1 ml-0 md:ml-64 ">
 
     {{-- <div class="flex-1 ml-0 md:ml-64"> --}}
-        <header class="bg-blue-900 text-white p-3 ml-3 flex justify-between items-center sticky top-0 z-10 rounded-xl ml-1.5 mr-1.5">
-          <button id="open-sidebar" class="md:hidden text-xl">&#9776;</button>
-      
-          <div class="flex space-x-3">
-            <div class="rounded-lg px-4 py-2 ml-1 bg-white text-blue-900 flex items-center  sm:py-1">
-              <h1 class="text-sm font-bold">Current Bal:</h1>
-              <span class="text-sm font-bold">₹ 0</span>
-            </div>
-
-            <div class="rounded-lg px-4 py-2 bg-white text-blue-900 flex items-center justify-center ">
-              <img src="img/plus.jpeg" width="20px" height="20px" class="mr-1" alt="">  
-              <h1 class="text-sm font-bold cursor-pointer"><span class="text-lg font-bold">
-              </span>Add Bal</h1>
-              {{-- <span class="text-sm font-bold">₹ 0</span> --}}
-            </div>
-
-            <div class="rounded-lg px-4 py-2 bg-white text-green-500 flex items-center  ">
-              <h1 class="text-sm font-bold mr-2">Verified </h1>
-              {{-- <span class="text-sm font-bold">₹ 0</span> --}}
-              <img src="img/tick2.jpg" width="15px" height="15px" class="mr-1" alt="">
-            </div>
-
-          </div>
-      
-          {{-- <div class="overflow-hidden whitespace-nowrap mr-10 flex-grow flex items-center justify-center">
-            <span id="running-text" class="inline-block animate-scroll text-lg font-medium text-white">
-              Welcome to Code Graphi
-            </span>
-          </div> --}}
-      
-          <div class="relative ">
+        <header class="sticky top-0 z-50  bg-blue-900 text-white lg:py-4 py-2 lg:ml-2 flex justify-end align-center  rounded-xl ml-1 mr-1 lg:ml-1.5 lg:mr-1.5 ">
+          <button id="open-sidebar" class="md:hidden text-xl pl-2">&#9776;</button>
+              
+         
+        <div class="relative ">
            
        
           <div class="flex justify-center align-center ">
@@ -384,15 +358,38 @@
                 } */
               }
             </style>
-            <div class="mb mr-4">
-              <h3>Welcome to Md Jasim</h3>
-            </div>
 
-            <button class="w-8 h-8 rounded-full bg-gray-100 text-blue-900 flex items-center justify-center mr-5" id="avatarButton">
-              <img src="https://abheepay.com/backend/assets/img/avatars/1.png" id="profile-pic" class="rounded-full" alt="profile-pic">
-            </button>
+     <div class="lg:mr-1 mr-1 ml-3 text-white p-1 rounded-lg  font-normal lg:font-bold flex flex-row text-md ">
+       <img src="{{asset('img/wallet-6.png')}}" width="30px" height="5px" class="bg-blue-900 rounded-full lg:block hidden" alt="">
+       <h3>Wallet: 2000/-</h3>
+     </div>
 
-          </div>
+     <div class="lg:mr-1 mr-0 text-white p-1 rounded-lg font-normal lg:font-bold text-md flex flex-row">
+       <img src="{{asset('img/wallet-6.png')}}" width="30px" height="5px" class="bg-blue-900 rounded-full lg:block hidden" alt="">
+       <h3>Downline: 86.4/-</h3>
+     </div>
+
+     <div class="lg:mr-3 mr-1 text-white p-1 rounded-lg font-normal lg:font-bold text-md flex flex-row">
+      <img src="{{asset('img/wallet-6.png')}}" width="30px" height="5px" class="bg-blue-900 rounded-full lg:block hidden" alt="">
+      <h3>API Wallet: 95.5/-</h3>
+     </div>
+
+          
+
+      <button class="w-10 h-7 mt-4 lg:w-8 lg:h-8  lg:mt-0 rounded-full bg-gray-100 text-blue-900 flex items-center justify-center " id="avatarButton">
+      <img src="https://abheepay.com/backend/assets/img/avatars/1.png" id="profile-pic" class="rounded-full" alt="profile-pic">
+      </button>
+
+      <div class=" text-white lg:p-1 rounded-lg lg:mr-3 font-sm lg:font-bold lg:block hidden text-lg">
+        <h3>Admin</h3>
+      </div>
+
+      <div class="mr-2 bg-white text-blue-900 lg:p-1.5 rounded-lg lg:px-3  font-semibold flex flex-row ml-1 ">
+          <img src="{{asset('img/notification-final.webp')}}" width="25px"  class="bg-blue-900 rounded-full lg:block hidden" alt="">
+          <h3 class="ml-1 pl-1 pr-1  lg:block hidden">Notification</h3>
+      </div>
+
+    </div>
 
             
             <!-- Dropdown Menu -->
@@ -438,9 +435,13 @@
             }
           });
         </script>
-      {{-- </div> --}}
+
+</header>
+{{-- </div> --}}
       
 {{-- Header end  --}}
+
+
 
 
 {{-- Main content  --}}
@@ -449,7 +450,7 @@
 
 {{-- main content end  --}}
 
-  </div>
+</div>
 
 
 

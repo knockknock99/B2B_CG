@@ -53,10 +53,13 @@ Route::get('/fund_request_service',[ViewController::class,'fund_request_service'
 Route::get('/money_transfer_service',[ViewController::class,'money_transfer_service'])->name('user.money_transfer_service');
 
 // AdminController 
-// Route::get('/master_admin_layout',[AdminController::class,'master_admin_layout'])->name('admin.master_admin_layout');
-// Route::get('/adminDashboard',[AdminController::class,'admin_Dashboard'])->name('admin.admin_dashboard');
+Route::get('/master_admin_layout',[AdminController::class,'master_admin_layout'])->name('admin.master_admin_layout');
+Route::get('/adminDashboard',[AdminController::class,'admin_Dashboard'])->name('admin.admin_dashboard');
 
-
+// Admin Pages 
+Route::get('/commission_slot',[AdminController::class,'commission_slot'])->name('admin.commission_slot');
+Route::get('/add_commission_slot',[AdminController::class,'add_commission_slot'])->name('admin.add_commission_slot');
+Route::get('/application_setting',[AdminController::class,'application_setting'])->name('admin.application_setting');
 
 
 

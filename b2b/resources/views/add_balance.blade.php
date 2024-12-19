@@ -15,8 +15,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
-  <div class="bg-white shadow-md rounded-lg p-6 w-full max-w-md">
-    <h2 class="text-2xl font-semibold text-gray-800 text-center mb-4">Add Balance</h2>
+  <div class="bg-white shadow-md rounded-lg p-8 w-4/5">
+    <h2 class="text-3xl font-semibold text-gray-800 text-center mb-4">Add Balance</h2>
 
     {{-- <form action="#" method="POST" class="space-y-4"> --}}
       <!-- Full Name -->
@@ -66,7 +66,7 @@
         <select 
           id="payment-method" 
           name="payment-method" 
-          class="mt-1 block w-full p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          class="mt-1 mb-3 block w-full p-2 border border-gray-900 bg-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
           <option value="credit-card">Credit Card</option>
           <option value="paypal">PayPal</option>
           <option value="bank-transfer">Bank Transfer</option>
@@ -77,7 +77,7 @@
       <div>
         <button 
           type="submit" 
-          class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+          class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md shadow-sm hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           Add Balance
         </button>
       </div>

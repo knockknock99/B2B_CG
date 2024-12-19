@@ -17,15 +17,15 @@
 <div class="main-container flex flex-col h-screen ">
   <!-- Sidebar start-->
   <aside id="sidebar" class="sidebar  fixed top-0 left-0 bg-white w-64 h-full shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto  z-20">
-    <div class="p-2 border-b-2 border-blue-900">
+    <div class="p-2 border-b-2 border-blue-900  sticky top-0 bg-white shadow-md p-4 z-10">
       <div class="flex justify-between items-center p-2">
        <a href="/"> <img src="https://www.codegraphi.com/assets/img/codegraphi-logo.png" alt="Code Graphi Logo"> </a>
         <button id="close-sidebar" class="md:hidden text-blue-900 text-xl">&times;</button>
       </div>
       {{-- <p class="flex justify-center">(User)</p> --}}
     </div>
-    <nav class="mt-3">
-      <a href="{{route('user.dashboard')}}" class="flex items-center px-4 py-3  font-medium text-blue-900 hover:text-white hover:bg-blue-900  rounded-l-3xl">
+    <nav class="mt-3 ">
+      <a href="{{route('user.dashboard')}}" class="flex items-center px-4 py-4   font-medium text-blue-900 hover:text-white hover:bg-blue-900  rounded-l-3xl">
         <span class="mr-3 opacity-3">
           <img src="img/home1.png" width="23px" height="23px" alt="home">
         </span><span>Dashboard</span>
@@ -41,7 +41,7 @@
       <div class="relative">
         <!-- Trigger -->
         <a href="#" 
-           class="flex items-center px-4 py-3 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
+           class="flex items-center px-4 py-4 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
            id="kyc-btn">
           <span class="mr-3">
             <img src="https://cdn-icons-png.flaticon.com/512/7355/7355471.png" width="25px" height="25px" alt="kyc icon">
@@ -99,7 +99,7 @@
       <div class="relative">
         <!-- Trigger -->
         <a href="{{route('user.service')}}" 
-           class="flex items-center px-4 py-3 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
+           class="flex items-center px-4 py-4 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
            >
           <span class="mr-3">
             <img src="{{asset('img/services.png')}}" width="25px" height="25px" alt="">
@@ -159,7 +159,7 @@
       <div class="relative">
         <!-- Trigger -->
         <a href="" 
-           class="flex items-center px-4 py-3 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
+           class="flex items-center px-4 py-4 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
            id="service-report-btn">
           <span class="mr-3">
             <img src="https://www.svgrepo.com/show/200330/report.svg" width="23px" height="23px" alt="">
@@ -210,32 +210,32 @@
       
 
 
-      <a href="{{route('user.account_histry')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.account_histry')}}" class="flex items-center px-4 py-4 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/file.png" width="27px" height="27px" alt="">
         </span><span>Account History</span>
       </a>
 
 
-      <a href="{{route('user.commission_slab')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.commission_slab')}}" class="flex items-center px-4 py-4 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/commission.png" width="27px" height="27px"  alt="home">
         </span><span>My Commission Slab</span>
       </a>
 
-      <a href="{{route('user.gstreport')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.gstreport')}}" class="flex items-center px-4 py-4 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/gst.png" width="27px" height="27px" alt="">
         </span><span>GST Report</span>
       </a>
 
-      <a href="{{route('user.tds')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.tds')}}" class="flex items-center px-4 py-4 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/tds.png" width="28px" height="28px" alt="">
         </span><span>TDS Report</span>
       </a>
 
-      <a href="{{route('user.commissionReport')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('user.commissionReport')}}" class="flex items-center px-4 py-4 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/commission_report.png" width="27px" height="27px" alt="">
         </span><span>Commision Report</span>
@@ -311,7 +311,7 @@
 <div class="flex-1 ml-0 md:ml-64 ">
 
     {{-- <div class="flex-1 ml-0 md:ml-64"> --}}
-        <header class="bg-blue-900 text-white p-1.5 lg:p-3 ml-3 flex justify-between items-center sticky top-0 z-10 rounded-xl ml-1.5 mr-1.5">
+        <header class="bg-blue-900 text-white p-1.5 lg:p-4 ml-3 flex justify-between items-center sticky top-0 z-10 rounded-xl ml-1.5 mr-1.5">
           <button id="open-sidebar" class="md:hidden text-xl">&#9776;</button>
       
           <div class="flex space-x-3">
@@ -321,7 +321,7 @@
             </div>
 
             <a href="{{route('user.add_balance')}}">
-            <div class="rounded-lg  px-2 lg:px-4 py-1 lg:py-2 bg-white text-blue-900 flex items-center justify-center ">
+            <div class="rounded-lg px-2 py-2 lg:px-4  lg:py-2 bg-white text-blue-900 flex items-center justify-center ">
             <img src="img/plus.jpeg" width="20px" height="20px" class="mr-1 " alt="">  
               <h1 class="text-sm lg:text-md lg:font-bold lg:text-lg cursor-pointer"><span class="text-sm lg:text-lg lg:font-normal">
               </span >Add Bal</h1>

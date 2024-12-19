@@ -13,7 +13,7 @@
   <div class="bg-white rounded-lg shadow-sm ml-4 mr-4 p-4 mt-6">
     <h1 class="text-2xl font-semibold mb-6">Application Settings</h1>
 
-    <form class="grid grid-cols-1 md:grid-cols-3 gap-6 ">
+    <form class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- Application Settings Section -->
       <div>
         <label class="block mb-2">App Name<span class="text-red-500">*</span></label>
@@ -111,6 +111,12 @@
         <label class="block mb-2">Certificate Issuer Designation<span class="text-red-500">*</span></label>
         <input type="text" class="w-full border rounded-md px-3 py-2" placeholder="Director" required />
       </div>
+
+      <!-- Adding New Image Form -->
+      <div>
+        <label class="block mb-2">Additional Image<span class="text-red-500">*</span></label>
+        <input type="file" class="w-full border rounded-md px-3 py-2" accept="image/*" required />
+      </div>
     </form>
 
     <!-- Certificate Terms & Conditions -->
@@ -120,6 +126,22 @@
 The appointment is valid for one year from the date of this certificate and subject to review. "The Banking Point" shall fully adhere to the terms and conditions of agreement to "Business Correspondent Agent" of Dactilar Technologies Pvt Ltd.
       </textarea>
     </div>
+
+    <div class="mt-6">
+        <label class="block mb-2">Certificate Terms & Conditions<span class="text-red-500">*</span></label>
+        <textarea class="w-full border rounded-md px-3 py-2" rows="3" readonly>
+  The appointment is valid for one year from the date of this certificate and subject to review. "The Banking Point" shall fully adhere to the terms and conditions of agreement to "Business Correspondent Agent" of Dactilar Technologies Pvt Ltd.
+        </textarea>
+      </div>
+
+      <div class="mt-6">
+        <label class="block mb-2">Certificate Terms & Conditions<span class="text-red-500">*</span></label>
+        <textarea class="w-full border rounded-md px-3 py-2" rows="3" readonly>
+  The appointment is valid for one year from the date of this certificate and subject to review. "The Banking Point" shall fully adhere to the terms and conditions of agreement to "Business Correspondent Agent" of Dactilar Technologies Pvt Ltd.
+        </textarea>
+      </div>
+      
+
   </div>
 </body>
 </html>

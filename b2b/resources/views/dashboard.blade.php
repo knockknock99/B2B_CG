@@ -3,16 +3,16 @@
 
 
  <!-- Main Content  start-->
- <main class="p-4">
+<main class="p-4 ">
 
   
   <!-- Metric Cards -->
-<div class="flex grid grid-cols-1 md:grid-cols-2 gap-3 w-full">
+ <div class="flex grid grid-cols-1 md:grid-cols-2 gap-3 w-full overflow-y-hidden  ">
 
-<div class="flex justify-center align-center  w-full pb-3">
-<div class="bg-white w-full  flex justify-center align-center ">
+   <div class="flex justify-center align-center  w-full pb-3">
+   <div class="bg-white w-full  flex justify-center align-center ">
 
-  <div class="bg-white shadow rounded-xl p-6 ">
+   <div class="bg-white shadow rounded-xl p-6 ">
     <div class="flex items-center justify-between">
       <div>
         <h2 class="text-lg font-bold text-gray-800">Congratulations! Md Jasim</h2>
@@ -24,10 +24,10 @@
   </div>
 
 
-</div>
+ </div>
 
  
-</div>
+ </div>
 
   <div class="grid  grid-cols-2 md:grid-cols-3 gap-2 mb-4">
     <div class="bg-white p-3 rounded-lg shadow  ">
@@ -56,24 +56,24 @@
   </div>
 
 
-</div>
+ </div>
 
-</div>
+ </div>
 
-<div class="flex-1 ml-0 md:ml-64 pr-4 pl-4 ">
-{{-- running text --}}
-<div class="w-full bg-white p-2  rounded-xl pr-20"> <!-- Changed mb-2 to mb-1 to reduce gap -->
+  <div class="flex-1 ml-0 md:ml-64 pr-4 pl-4 ">
+ {{-- running text --}}
+ <div class="w-full bg-white p-2  rounded-xl pr-20"> <!-- Changed mb-2 to mb-1 to reduce gap -->
   <marquee class="text-blue-900 text-lg font-semibold"> Welcome To Code Graphi Open Monday To Saturday 10:00AM to 7:00PM</marquee>
-</div>
-</div>
+  </div>
+  </div>
 
 
 
 
-{{-- Services Section Start --}}
+  {{-- Services Section Start --}}
 
-<!-- Services Section Start -->
-<div class="flex-1 px-4 py-8 pt-3 md:ml-64">
+ <!-- Services Section Start -->
+  <div class="flex-1 px-4 py-8 pt-3 md:ml-64">
   <!-- Mobile View -->
   <div class="block md:hidden">
     <div class="grid gap-4">
@@ -217,9 +217,9 @@
       </div>
     </div>
   </div>
-</div>
+  </div>
 
-<script>
+  <script>
   const carousels = [
     { id: "mobile", totalSlides: 3 },
     { id: "desktop", totalSlides: 3 }
@@ -253,14 +253,14 @@
       updateCarousel();
     }, autoPlayInterval);
   });
-</script>
+  </script>
 
 
   
 
 
-<div class="flex-1 ml-0 md:ml-64 pl-5 pr-5 pb-5 ">
-<!-- Service Statistics -->
+  <div class="flex-1 ml-0 md:ml-64 pl-5 pr-5 pb-5 ">
+ <!-- Service Statistics -->
   <div class="bg-white p-6 rounded-lg shadow">
     <div class="flex justify-between items-center mb-6">
       <h2 class="text-xl font-semibold">Service Statistics</h2>
@@ -290,7 +290,6 @@
   </div>
 </main>
 
-</div>
 
 
 @endsection
