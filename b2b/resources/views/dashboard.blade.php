@@ -33,7 +33,7 @@
     <div class="bg-white p-3 rounded-lg shadow  ">
       <div class="">
         <p class="text-2xl font-bold">₹ 25.27</p>
-        <h3 class="text-gray-700">Commission Earning</h3>
+        <h3 class="text-gray-700">Today's Commission Earning</h3>
       </div>
       <canvas id="commissionChart"></canvas>
     </div>
@@ -41,7 +41,7 @@
     <div class="bg-white p-3 rounded-lg shadow ">
       <div class="">
         <p class="text-2xl font-bold">₹ 0.00</p>
-        <h3 class="text-gray-700">Wallet History</h3>
+        <h3 class="text-gray-700">Monthly Commission Earning</h3>
       </div>
       <canvas id="walletChart"></canvas>
     </div>

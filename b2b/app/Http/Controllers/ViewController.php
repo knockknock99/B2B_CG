@@ -119,4 +119,6 @@ class ViewController extends Controller
     public function add_balance(){
         return view('add_balance');
     }
+
+ 
 }

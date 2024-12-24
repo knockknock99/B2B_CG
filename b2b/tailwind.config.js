@@ -26,6 +26,7 @@ module.exports = {
       extend: {
         colors: {
           customBlue: '#000033', // You can name it as you wish
+          orange1: '#FFA500',
         },
       },
     },

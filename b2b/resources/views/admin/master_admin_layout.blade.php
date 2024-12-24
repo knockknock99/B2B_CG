@@ -7,6 +7,9 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js CDN -->
 
 @stack('scripts')
@@ -18,10 +21,11 @@
   <!-- Sidebar start-->
   <aside id="sidebar" class="sidebar  fixed top-0 left-0 bg-white w-64 h-full shadow-lg transform -translate-x-full md:translate-x-0 transition-transform duration-300 overflow-y-auto  z-20">
     <div class="p-2 border-b-2 border-blue-900   sticky top-0 bg-white shadow-md p-4 z-10">
-      <div class="flex justify-between items-center p-1 ">
+     <a href="{{route('admin.admin_dashboard')}}"> <div class="flex justify-between items-center p-1 ">
         <img src="https://www.codegraphi.com/assets/img/codegraphi-logo.png" alt="Code Graphi Logo">
         <button id="close-sidebar" class="md:hidden text-blue-900 text-xl">&times;</button>
       </div>
+    </a>
       {{-- <p class="flex justify-center">(Admin)</p> --}}
     </div>
     <nav class="mt-5">
@@ -56,15 +60,16 @@
       
         <!-- Dropdown -->
         <div id="kyc-dropdown-menu" class="relative left-10 w-48 hidden">
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Service Category</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">City Master</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">User Type Master</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Service Master</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Plan Master</a>
+          <a href="{{route('admin.service_category')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Service Category</a>
+          <a href="{{route('admin.city_master')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">City Master</a>
+          <a href="{{route('admin.user_type_master')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">User Type Master</a>
+          <a href="{{route('admin.plain_master')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Service Master</a>
+          <a href="{{route('admin.service_master')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Plan Master</a>
           <a href="{{route('admin.commission_slot')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Commission Slots</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Application Setting</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Application Banners</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Announcements</a>
+          <a href="{{route('admin.application_setting')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Application Setting</a>
+          <a href="{{route('admin.application_banner')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Application Banners</a>
+          <a href="{{route('admin.announcement')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Announcements</a>
+          <a href="{{route('admin.ticket_department')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Ticket Department</a>
         </div>
       </div>
 
@@ -93,31 +98,31 @@
       
 
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('admin.company_bank')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="{{asset('img/bank.png')}}" width="25px" height="25px" alt="service icon">
         </span><span>Company Banks</span>
       </a>
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('admin.user_manager')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="{{asset('img/user_manager.png')}}" width="30px" height="30px" alt="service icon">
         </span><span>Users Manager</span>
       </a>
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('admin.admin_account_history')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="{{asset('img/commission_report.png')}}" width="28px" height="28px" alt="service icon">
         </span><span>Account History</span>
       </a>
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('admin.admin_fund_request')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="{{asset('img/funding.png')}}" width="32px" height="32px" alt="service icon">
         </span><span>Fund Requests</span>
       </a>
 
-      <a href="#" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('admin.payout_bank')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="{{asset('img/payout_bank.png')}}" width="32px" height="32px" alt="service icon">
         </span><span>Payout Banks</span>
@@ -148,8 +153,8 @@
       
         <!-- Dropdown -->
         <div id="dropdown-menu" class="relative left-8  w-48 hidden">
-          <a href="{{route('user.mobilerecharge')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Fund Transfer</a>
-          <a href="{{route('user.dth_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">All Fund Transfer</a>
+          <a href="{{route('admin.admin_fund_transfer')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Fund Transfer</a>
+          <a href="{{route('admin.all_fund_transfer')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">All Fund Transfer</a>
          
         </div>
       </div>
@@ -199,14 +204,14 @@
       
         <!-- Dropdown -->
         <div id="dropdown-menu1" class="relative left-8  w-48 hidden">
-          <a href="{{route('user.mobilerecharge')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Mobile Recharge</a>
-          <a href="{{route('user.dth_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Dth Recharge</a>
-          <a href="{{route('user.bill_payment_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Bill Payment</a>
-          <a href="{{route('user.aeps_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Aeps</a>
-          <a href="{{route('user.money_transfer_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Money Transfer</a>
+          <a href="{{route('admin.mobile_recharge_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Mobile Recharge</a>
+          <a href="{{route('admin.dth_recharge_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Dth Recharge</a>
+          <a href="{{route('admin.bill_payment_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Bill Payment</a>
+          <a href="{{route('admin.admin_aeps_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Aeps</a>
+          <a href="{{route('admin.admin_money_transfer_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Money Transfer</a>
           {{-- <a href="{{route('user.tds')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Payout</a> --}}
-          <a href="{{route('user.fund_request')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Fund Request</a>
-          <a href="{{route('user.aadhar_pay_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Aadhar Pay</a>
+          <a href="{{route('admin.admin_fund_request_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Fund Request</a>
+          <a href="{{route('admin.admin_aadhar_pay_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Aadhar Pay</a>
         </div>
       </div>
 
@@ -234,37 +239,89 @@
 
 
 
-      <a href="{{route('user.account_histry')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('admin.admin_commission_slab')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/file.png" width="30px" height="30px" alt="">
         </span><span>Commission Slab</span>
       </a>
 
 
-      <a href="{{route('user.commission_slab')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('admin.admin_gst_report')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/commission.png" width="30px" height="30px"  alt="home">
         </span><span>GST Report</span>
       </a>
 
-      <a href="{{route('user.gstreport')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('admin.admin_tds_report')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/gst.png" width="30px" height="30px" alt="">
         </span><span>TDS Report</span>
       </a>
 
 
-      <a href="{{route('user.commissionReport')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      <a href="{{route('admin.admin_commission_report')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/commission_report.png" width="28px" height="28px" alt="">
         </span><span>Commision Report</span>
       </a>
 
-      <a href="{{route('user.commissionReport')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
+      {{-- <a href="{{route('user.commissionReport')}}" class="flex items-center px-4 py-3 text-blue-900 font-medium  text-['#000b55'] hover:bg-blue-900 hover:text-white rounded-l-3xl ">
         <span class="mr-3">
             <img src="img/commission_report.png" width="28px" height="28px" alt="">
         </span><span>Admin Wallet</span>
-      </a>
+      </a> --}}
+
+
+
+
+      <div class="relative">
+        <!-- Trigger -->
+        <a href="#" 
+           class="flex items-center px-4 py-3 text-blue-900 font-medium hover:bg-blue-900 hover:text-white rounded-l-3xl"
+           id="account-setting-btn1">
+          <span class="mr-3">
+            <img src="{{asset('img/bank.png')}}" width="25px" height="25px" alt="">
+          </span>
+          <span>Admin Wallet</span>
+          <span class="ml-2">
+            <svg id="account-arrow-icon1" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transform transition-transform" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06-.02L10 10.654l3.71-3.464a.75.75 0 011.02 1.09l-4 3.75a.75.75 0 01-1.04 0l-4-3.75a.75.75 0 01-.02-1.06z" clip-rule="evenodd" />
+            </svg>
+          </span>
+        </a>
+      
+        <!-- Dropdown -->
+        <div id="account-dropdown-menu1" class="relative left-10 w-48 hidden">
+          <a href="{{route('admin.admin_wallet_add_fund')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Add Funds</a>
+          <a href="{{route('admin.admin_view_all')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">View All</a>
+          {{-- <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Logout</a> --}}
+        </div>
+      </div>
+      
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const accountButton = document.getElementById('account-setting-btn1');
+          const accountDropdown = document.getElementById('account-dropdown-menu1');
+          const accountArrowIcon = document.getElementById('account-arrow-icon1');
+      
+          accountButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            accountDropdown.classList.toggle('hidden');
+            accountArrowIcon.classList.toggle('rotate-180');
+          });
+      
+          // Close dropdown when clicking outside
+          document.addEventListener('click', (e) => {
+            if (!accountButton.contains(e.target) && !accountDropdown.contains(e.target)) {
+              accountDropdown.classList.add('hidden');
+              accountArrowIcon.classList.remove('rotate-180');
+            }
+          });
+        });
+      </script>
+
+
+
 
       <h1 class="pl-4">Account</h1>
       
@@ -293,9 +350,9 @@
       
         <!-- Dropdown -->
         <div id="account-dropdown-menu" class="relative left-10 w-48 hidden">
-          <a href="{{route('user.account_setting')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Change Password</a>
-          {{-- <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Settings</a>
-          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Logout</a> --}}
+          <a href="{{route('admin.admin_change_password')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Change Password</a>
+          {{-- <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Settings</a> --}}
+          <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Logout</a>
         </div>
       </div>
       

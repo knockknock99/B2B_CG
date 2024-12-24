@@ -1,6 +1,6 @@
-@extends('masterLayout')
+@extends('admin.master_admin_layout')
 
-@section('content')
+@section('content_admin')
 
 <main class="p-4">
 
@@ -27,14 +27,14 @@
     </div>
 
   </div> --}}
-  <div class="max-w-4xl mx-auto p-10 bg-blue-800 justify-center align-center overflow-x-hidden">
+  <div class="max-w-4xl mx-auto p-10 bg-blue-50 justify-center align-center overflow-x-hidden">
       <div class="bg-white p-6 rounded-lg shadow-lg">
         <h1 class="text-2xl font-semibold text-gray-800 mb-7 ">Update Account / Transaction Password</h1>
         <div class="flex flex-wrap  justify-center items-center space-x-2 mb-6">
-          <button id="accountPasswordTab" class="bg-blue-900 text-white mb-6 px-20 py-3 rounded-md hover:bg-blue-800">
+          <button id="accountPasswordTab" class="bg-blue-600 text-white mb-6 px-20 py-3 rounded-md hover:bg-blue-700">
             Account Password
           </button>
-          <button id="transactionPasswordTab" class="bg-blue-800 mb-6 px-20 py-3 rounded-md hover:bg-blue-800">
+          <button id="transactionPasswordTab" class="bg-gray-200 mb-6 px-20 py-3 rounded-md hover:bg-gray-300">
             Transaction Password
           </button>
         </div>

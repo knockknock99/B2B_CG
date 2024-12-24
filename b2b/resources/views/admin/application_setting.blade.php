@@ -11,7 +11,7 @@
 </head>
 <body class="bg-gray-50 p-6">
   <div class="bg-white rounded-lg shadow-sm ml-4 mr-4 p-4 mt-6">
-    <h1 class="text-2xl font-semibold mb-6">Application Settings</h1>
+    <h1 class="text-2xl font-semibold mb-6 bg-blue-900 px-5 py-3">Application Settings</h1>
 
     <form class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <!-- Application Settings Section -->
@@ -94,7 +94,7 @@
 
       <div>
         <label class="block mb-2">Theme Secondary Color<span class="text-red-500">*</span></label>
-        <input type="color" class="w-full border rounded-md px-3 py-2" value="#ADD8E6" required />
+        <input type="color" class="w-full border rounded-md px-3 py-2 " value="#ADD8E6" required />
       </div>
 
       <div>
@@ -128,19 +128,27 @@ The appointment is valid for one year from the date of this certificate and subj
     </div>
 
     <div class="mt-6">
-        <label class="block mb-2">Certificate Terms & Conditions<span class="text-red-500">*</span></label>
+        <label class="block mb-2">About Us<span class="text-red-500">*</span></label>
         <textarea class="w-full border rounded-md px-3 py-2" rows="3" readonly>
-  The appointment is valid for one year from the date of this certificate and subject to review. "The Banking Point" shall fully adhere to the terms and conditions of agreement to "Business Correspondent Agent" of Dactilar Technologies Pvt Ltd.
+"Empowering businesses with innovative IT solutions and cutting-edge technology."
         </textarea>
       </div>
 
       <div class="mt-6">
-        <label class="block mb-2">Certificate Terms & Conditions<span class="text-red-500">*</span></label>
+        <label class="block mb-2">Help<span class="text-red-500">*</span></label>
         <textarea class="w-full border rounded-md px-3 py-2" rows="3" readonly>
-  The appointment is valid for one year from the date of this certificate and subject to review. "The Banking Point" shall fully adhere to the terms and conditions of agreement to "Business Correspondent Agent" of Dactilar Technologies Pvt Ltd.
+Welcome to Code Graphi Technology Pvt Ltd. Please Call +91-8092374882, +91-7903837267 for any queries.
+        </textarea>
+      </div>
+
+      <div class="mt-6">
+        <label class="block mb-2">Privacy Policy<span class="text-red-500">*</span></label>
+        <textarea class="w-full border rounded-md px-3 py-2" rows="3" readonly>
+Welcome to Code Graphi Technology Pvt Ltd. Please Call +91-8092374882, +91-7903837267 for any queries
         </textarea>
       </div>
       
+     <input type="submit" name="btn" id="btn" class="bg-blue-900 py-2 px-6 rounded mt-4 hover:bg-blue-800">
 
   </div>
 </body>

@@ -6,7 +6,7 @@
 <main class="flex flex-row "> 
 {{-- <div class="flex flex-row "> --}}
   <!-- Main Content -->
-  {{-- <main class="flex-1 mt-0 overflow-y-hidden p-4 bg-gray-100"> --}}
+  {{-- <main class="flex-1 mt-0 overflow-y-hidden p-4 bg-gray-100"> --}}   
     <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -19,14 +19,14 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     </head>
     <body class="bg-gray-100">
-      <main class="p-6 max-w-10xl mx-auto">
+      <main class="p-6 max-w-10xl mx-auto  ">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <!-- Left Column: Service Statistics Cards -->
           <div class="lg:col-span-2">
 
         
             <div>
-              <div class="flex justify-between items-center mb-4">
+              <div class="flex justify-between items-center mb-4 ">
                 <h2 class="text-2xl font-semibold">Service Statistics</h2>
                 <button id="filterByDateBtn" class="px-4 py-2 bg-blue-900 text-white rounded-lg hover:bg-blue-800">
                   Filter by Date
@@ -34,11 +34,11 @@
               </div>
               <div id="statsCards" class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <!-- Example of a Service Card -->
-                <div class="bg-green-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/commission_report.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/recharge-wallet.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -48,11 +48,11 @@
                   </div>
                 </div>
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/commission_report.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/recharge-wallet.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -62,11 +62,11 @@
                   </div>
                 </div>
 
-                <div class="bg-red-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-red-500 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/commission_report.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/recharge-wallet.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -76,11 +76,11 @@
                   </div>
                 </div>
 
-                <div class="bg-green-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/aep.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/aep (1).png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -90,11 +90,11 @@
                   </div>
                 </div>
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/aep.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/aep (1).png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -104,11 +104,11 @@
                   </div>
                 </div>
 
-                <div class="bg-red-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-red-500 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/aep.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/aep (1).png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -127,11 +127,11 @@
 
 
 
-                <div class="bg-green-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/Dth.png')}}" width="23px" height="23px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -142,11 +142,11 @@
                 </div>
 
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/Dth.png')}}" width="23px" height="23px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -156,11 +156,11 @@
                   </div>
                 </div>
 
-                <div class="bg-red-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-red-500 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/Dth.png')}}" width="23px" height="23px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -171,11 +171,11 @@
                 </div>
 
 
-                <div class="bg-green-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/bill_payment.png')}}" width="23px" height="23px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -185,11 +185,11 @@
                   </div>
                 </div>
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/bill_payment.png')}}" width="23px" height="23px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -199,11 +199,11 @@
                   </div>
                 </div>
 
-                <div class="bg-red-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-red-500 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/bill_payment.png')}}" width="23px" height="23px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -216,11 +216,11 @@
 
                 
 
-                <div class="bg-green-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/bank.png')}}" width="20px" height="20px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -230,11 +230,11 @@
                   </div>
                 </div>
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/bank.png')}}" width="20px" height="20px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -244,11 +244,11 @@
                   </div>
                 </div>
 
-                <div class="bg-red-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-red-500 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/bank.png')}}" width="20px" height="20px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -258,11 +258,11 @@
                   </div>
                 </div>
 
-                <div class="bg-green-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/fund_request.png')}}" width="22px" height="22px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -272,11 +272,11 @@
                   </div>
                 </div>
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/fund_request.png')}}" width="22px" height="22px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -286,11 +286,11 @@
                   </div>
                 </div>
 
-                <div class="bg-red-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-red-500 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/fund_request.png')}}" width="23px" height="23px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -301,11 +301,11 @@
                 </div>
 
 
-                <div class="bg-green-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/aadhar_pay1.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -315,11 +315,11 @@
                   </div>
                 </div>
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20spx" alt="">
+                      <img src="{{asset('img/aadhar_pay1.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -329,11 +329,11 @@
                   </div>
                 </div>
 
-                <div class="bg-red-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-red-500 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/aadhar_pay1.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -344,11 +344,11 @@
                 </div>
 
 
-                <div class="bg-green-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/atm.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -358,11 +358,11 @@
                   </div>
                 </div>
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/atm.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -372,11 +372,11 @@
                   </div>
                 </div>
 
-                <div class="bg-red-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-red-500 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/atm.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -387,11 +387,11 @@
                 </div>
 
 
-                <div class="bg-green-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/toll.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -401,11 +401,11 @@
                   </div>
                 </div>
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/toll.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -415,11 +415,11 @@
                   </div>
                 </div>
 
-                <div class="bg-red-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-red-500 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="25px" height="25px" alt="">
+                      <img src="{{asset('img/toll.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -431,11 +431,11 @@
 
 
 
-                <div class="bg-red-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-green-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/cms.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -445,11 +445,11 @@
                   </div>
                 </div>
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-400 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/cms.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -459,11 +459,11 @@
                   </div>
                 </div>
 
-                <div class="bg-red-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-red-500 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full">
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
-                      <img src="{{asset('img/atm.png')}}" width="20px" height="20px" alt="">
+                      <img src="{{asset('img/cms.png')}}" width="25px" height="25px" alt="">
                     </div>
                     <div>
                       <p class="font-semibold border-b-2 border-gray-700 text-gray-800">₹1,107.00</p>
@@ -487,7 +487,7 @@
                   </div>
                 </div> --}}
 
-                {{-- <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                {{-- <div class="bg-orange-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full"> --}}
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
@@ -531,7 +531,7 @@
                 </div>
 
 
-                <div class="bg-yellow-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-200 p-3 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full"> --}}
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
@@ -575,7 +575,7 @@
                   </div>
                 </div>
 
-                <div class="bg-yellow-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-orange-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full"> --}}
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
@@ -618,7 +618,7 @@
                   </div>
                 </div> --}}
 
-                {{-- <div class="bg-yellow-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                {{-- <div class="bg-orange-200 p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div class="flex items-center gap-3">
                     <div class="p-2 bg-blue-50 rounded-full"> --}}
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
@@ -714,9 +714,9 @@
                   </div>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow   border-l-8 border-yellow-600">
+                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow   border-l-8 border-orange-600">
                   <div class="flex items-center gap-3 ">
-                    <div class="p-2 bg-yellow-500 rounded-full"> --}}
+                    <div class="p-2 bg-orange-500 rounded-full"> --}}
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
                       {{-- <img src="{{asset('img/commission_report.png')}}" width="25px" height="25px" alt="">
                     </div>
@@ -761,9 +761,9 @@
                   </div>
                 </div>
 
-                <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow   border-l-8 border-yellow-600">
+                <div class="bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow   border-l-8 border-orange-600">
                   <div class="flex items-center gap-3 ">
-                    <div class="p-2 bg-yellow-500 rounded-full"> --}}
+                    <div class="p-2 bg-orange-500 rounded-full"> --}}
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
                       {{-- <img src="{{asset('img/atm.png')}}" width="25px" height="25px" alt="">
                     </div>
@@ -855,9 +855,9 @@
                   </div>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow   border-b-8 border-yellow-600">
+                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow   border-b-8 border-orange-600">
                   <div class="flex items-center gap-3 ">
-                    <div class="p-2 bg-yellow-500 rounded-full"> --}}
+                    <div class="p-2 bg-orange-500 rounded-full"> --}}
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
                       {{-- <img src="{{asset('img/commission_report.png')}}" width="25px" height="25px" alt="">
                     </div>
@@ -900,9 +900,9 @@
                   </div>
                 </div>
 
-                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow   border-b-8 border-yellow-600">
+                <div class="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow   border-b-8 border-orange-600">
                   <div class="flex items-center gap-3 ">
-                    <div class="p-2 bg-yellow-500 rounded-full"> --}}
+                    <div class="p-2 bg-orange-500 rounded-full"> --}}
                       {{-- <svg class="w-6 h-6"><use href="#smartphone-icon" /></svg> --}}
                       {{-- <img src="{{asset('img/atm.png')}}" width="25px" height="25px" alt="">
                     </div>

@@ -116,7 +116,7 @@
         <div id="dropdown-menu2" class="relative left-8  w-48 hidden">
           <a href="{{route('user.mobilerecharge')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Mobile Recharge</a>
           <a href="{{route('user.dth_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Dth Recharge</a>
-          <a href="{{route('user.bill_payment_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Bill Payment</a>
+          {{-- <a href="{{route('user.bill_payment_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Bill Payment</a> --}}
           <a href="{{route('user.aeps_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Aeps</a>
           <a href="{{route('user.money_transfer_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Money Transfer</a>
           {{-- <a href="{{route('user.tds')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Payout</a> --}}
@@ -176,7 +176,7 @@
         <div id="dropdown-menu" class="relative left-8  w-48 hidden">
           <a href="{{route('user.mobilerecharge')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Mobile Recharge</a>
           <a href="{{route('user.dth_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Dth Recharge</a>
-          <a href="{{route('user.bill_payment_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Bill Payment</a>
+          {{-- <a href="{{route('user.bill_payment_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Bill Payment</a> --}}
           <a href="{{route('user.aeps_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Aeps</a>
           <a href="{{route('user.money_transfer_report')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Money Transfer</a>
           {{-- <a href="{{route('user.tds')}}" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-xl">Payout</a> --}}
